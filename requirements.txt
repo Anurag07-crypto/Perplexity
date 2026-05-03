@@ -1,0 +1,16 @@
+langchain_tavily
+tavily
+langchain
+langchain_core
+langgraph
+langchain_community
+pymongo
+langchain_groq
+sentence-transformers
+streamlit
+fastapi
+chromadb
+uvicorn
+faiss-cpu
+python_dotenv
+python-multipart
