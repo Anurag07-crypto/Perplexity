@@ -16,7 +16,7 @@ logger = get_logger(__name__)
 app = FastAPI(title="server")
 
 class Request(BaseModel):
-    "Request Schema for /server end pipeline"
+    """Request Schema for /server end pipeline"""
     query: str
     tools: str
 
