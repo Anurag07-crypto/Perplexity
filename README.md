@@ -39,7 +39,8 @@ Perplexitiy is an AI-powered platform designed for deep research, intelligent in
 ```
 Perplexitiy_mini/
 ├── frontend_server/
-│   └── frontend.py          # Streamlit UI application
+│   └── frontend.py        # Streamlit UI application
+|   └── services.py        
 ├── backend_server/
 │   └── backend.py           # FastAPI backend server
 ├── RAG/
