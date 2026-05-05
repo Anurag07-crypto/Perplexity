@@ -7,18 +7,18 @@ import os
 import streamlit as st
 import requests
 from datetime import datetime
-from langchain_groq import ChatGroq
 
 from RAG.data_ingestion import data_ingest, splitter
 from RAG.embedding_manager import EmbeddingManager
 from RAG.vector_store import VectorStore
-from RAG.retriever import Retriever
+from frontend_server.services import RAGService, LLMService
+
 from logger import get_logger
 
 logger = get_logger(__name__)
-load_env = load_dotenv(r"C:/Users/Lenovo/Desktop/Perplexitiy_mini/.env")
+
+load_env = load_dotenv()
 os.getenv("GROQ_API_KEY")
-llm = ChatGroq(model="llama-3.1-8b-instant")
 
 # Initialize session state for vector store management
 if "vector_store" not in st.session_state:
@@ -27,12 +27,23 @@ if "embedding_manager" not in st.session_state:
     st.session_state.embedding_manager = EmbeddingManager()
 if "data_initialized" not in st.session_state:
     st.session_state.data_initialized = False
+if "rag_service" not in st.session_state:
+    st.session_state.rag_service = RAGService(
+        embedding_manager=st.session_state.embedding_manager,
+        vector_store=st.session_state.vector_store
+    )
+if "llm_service" not in st.session_state:
+    st.session_state.llm_service = LLMService()
 
 vector_store = st.session_state.vector_store
 embedding_manager = st.session_state.embedding_manager
+rag_service = st.session_state.rag_service
+llm_service = st.session_state.llm_service
 
 def initialize_data(force_reload=False):
     """Initialize vector store with documents from text_docs directory"""
+    
+    
     if st.session_state.data_initialized and not force_reload:
         logger.info("DATA already LOADED")
         return
@@ -54,8 +65,7 @@ def initialize_data(force_reload=False):
         raise
 
 
-retriever = Retriever(embedding_manager=embedding_manager,
-                      vector_store=vector_store)
+
 
 # Backend API configuration
 BACKEND_URL = "http://127.0.0.1:8000"
@@ -209,7 +219,7 @@ with tab_1:
                         st.success("✅ Response received successfully!")
                         st.markdown('<div class="response-box">', unsafe_allow_html=True)
                         st.markdown(response)
-                        if tools=="deep_search":
+                        if tools == "deep_search":
                             dir_path = Path(__file__).parent.parent / "fetched_data" / "deep_Search_results"/f"deep_search.txt"
                             
                             if dir_path.exists():
@@ -317,43 +327,23 @@ with tab_2:
                         if not st.session_state.data_initialized:
                             st.warning("⚠️ No documents indexed yet. Please upload and index a document first.")
                             logger.warning("No documents in vector store")
-                            st.stop()  # Stop execution here
+                            st.stop()
                         
-                        # Retrieve relevant documents
-                        results = retriever.retrieve(rag_query)
+                        # Retrieve relevant documents using RAG service
+                        results = rag_service.retrieve_documents(rag_query)
                         
                         if not results:
                             logger.error("No relevant info found in knowledge database")
                             st.warning("⚠️ No relevant information found. Try uploading more documents or refining your query.")
                         else:
                             st.success(f"✅ Found {len(results)} relevant documents")
-                            # Extract context from results
-                            context_parts = []
-                            for doc in results:
-                                if isinstance(doc, dict):
-                                    # If retriever returns dict format
-                                    content = doc.get('content') or doc.get('document', '')
-                                elif hasattr(doc, 'page_content'):
-                                    # If it's a LangChain Document
-                                    content = doc.page_content
-                                else:
-                                    content = str(doc)
-                                context_parts.append(content)
                             
-                            context = "\n\n".join(context_parts)
+                            # Extract context using RAG service
+                            context = rag_service.extract_context(results)
                             
-                            PROMPT = f'''### You are a 'Personal Assitant' with over '5+' years of experience
-whenever a person ask you any question you have to answer him properly using the following 
-Context:
-- {context}
-User Query:
-- {rag_query}
-Constraints- Don't give any false info only use the following context to answer this is strictly followed by everyone
-Response format: should be in Markdown format with perfect response format that looks beautiful to our eyes.
-"Answer directly. No greetings. No repeated introductions."
-'''
-                            response = llm.invoke(PROMPT)
-                            st.markdown(response.content)
+                            # Generate answer using LLM service
+                            response = llm_service.answer_question(rag_query, context)
+                            st.markdown(response)
                     except Exception as e:
                         st.error(f"❌ Error during search: {str(e)}")
                         logger.error(f"Search error: {str(e)}")
