@@ -32,7 +32,7 @@ class Email_agent:
         
         load_dotenv()
 
-        app_pass = os.getenv("app_password")
+        app_pass = os.getenv("APP_PASSWORD")
         GROQ_API_KEY = os.getenv("GROQ_API_KEY")
         
         if not GROQ_API_KEY:

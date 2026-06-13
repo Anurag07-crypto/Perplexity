@@ -12,6 +12,8 @@ from RAG.data_ingestion import data_ingest, splitter
 from RAG.embedding_manager import EmbeddingManager
 from RAG.vector_store import VectorStore
 from frontend_server.services import RAGService, LLMService
+from perplexitiy.recruiter_agent import processing
+import pandas as pd
 
 from logger import get_logger
 
@@ -144,7 +146,7 @@ with st.sidebar:
     request_timeout = st.slider("Request Timeout (seconds)", 30, 600, 500, 30)
 
 # Main tabs
-tab_1, tab_2 = st.tabs(["🤖 Perplexity Agent", "📚 RAG System"])
+tab_1, tab_2, tab_3 = st.tabs(["🤖 Perplexity Agent", "📚 RAG System", "📧 Recruiter Agent"])
 
 # ==================== TAB 1: PERPLEXITY AGENT ====================
 with tab_1:
@@ -349,3 +351,125 @@ with tab_2:
                         logger.error(f"Search error: {str(e)}")
                         import traceback
                         traceback.print_exc()
+
+# ==================== TAB 3: RECRUITER AGENT ====================
+with tab_3:
+    st.header("📧 Recruiter Agent")
+    st.info("Upload a CSV file with recruiter information to send personalized professional emails.")
+    
+    col_upload, col_preview = st.columns(2, gap="large")
+    
+    with col_upload:
+        st.subheader("📤 CSV Upload")
+        st.markdown("**Required CSV columns:**")
+        st.markdown("- `name`: Recruiter's name")
+        st.markdown("- `email`: Recruiter's email address")
+        st.markdown("- `job_description`: Job description to customize email")
+        
+        uploaded_csv = st.file_uploader(
+            "Choose a CSV file",
+            type=["csv"],
+            label_visibility="collapsed"
+        )
+        
+        if uploaded_csv:
+            try:
+                df = pd.read_csv(uploaded_csv)
+                st.session_state.recruiter_df = df
+                st.success(f"✅ CSV loaded: {uploaded_csv.name}")
+                st.metric("Total Records", len(df))
+                
+            except Exception as e:
+                st.error(f"❌ Error reading CSV: {str(e)}")
+                logger.error(f"CSV reading error: {str(e)}")
+    
+    with col_preview:
+        st.subheader("👁️ Data Preview")
+        if "recruiter_df" in st.session_state:
+            df = st.session_state.recruiter_df
+            
+            # Validate required columns
+            required_cols = ["name", "email", "job_description"]
+            missing_cols = [col for col in required_cols if col not in df.columns]
+            
+            if missing_cols:
+                st.error(f"❌ Missing columns: {', '.join(missing_cols)}")
+            else:
+                st.dataframe(df.head(10), use_container_width=True)
+                
+                # Show data types
+                st.subheader("Column Info")
+                st.dataframe(pd.DataFrame({
+                    "Column": df.columns,
+                    "Type": df.dtypes.astype(str),
+                    "Non-Null": df.count()
+                }), use_container_width=True)
+    
+    # Processing section
+    st.divider()
+    st.subheader("⚙️ Email Generation & Sending")
+    
+    if "recruiter_df" in st.session_state:
+        df = st.session_state.recruiter_df
+        required_cols = ["name", "email", "job_description"]
+        missing_cols = [col for col in required_cols if col not in df.columns]
+        
+        if missing_cols:
+            st.error(f"❌ Cannot proceed. Missing columns: {', '.join(missing_cols)}")
+        else:
+            col_config, col_action = st.columns([2, 1], gap="large")
+            
+            with col_config:
+                st.markdown("**Processing Settings**")
+                batch_size = st.number_input(
+                    "Batch size (emails per batch)",
+                    min_value=1,
+                    max_value=len(df),
+                    value=min(5, len(df)),
+                    step=1
+                )
+                send_all = st.checkbox(
+                    "Send all emails",
+                    value=False,
+                    help="If unchecked, will process only the first batch"
+                )
+            
+            with col_action:
+                st.markdown("**Action**")
+                st.markdown("")
+                if st.button("🚀 Send Emails", use_container_width=True, key="send_emails_btn"):
+                    if df.empty:
+                        st.error("❌ No data to process")
+                    else:
+                        try:
+                            progress_bar = st.progress(0, text="Starting email processing...")
+                            status_placeholder = st.empty()
+                            
+                            # Determine how many records to process
+                            records_to_process = len(df) if send_all else min(batch_size, len(df))
+                            df_to_process = df.iloc[:records_to_process].reset_index(drop=True)
+                            
+                            # Use the processing function from recruiter_agent
+                            with st.spinner("Processing emails..."):
+                                processing(df_to_process)
+                            
+                            progress_bar.progress(1.0, text="✅ Processing complete!")
+                            
+                            # Display summary
+                            st.divider()
+                            st.subheader("📊 Processing Summary")
+                            summary_col1, summary_col2 = st.columns(2)
+                            
+                            with summary_col1:
+                                st.metric("📨 Total Processed", records_to_process)
+                            with summary_col2:
+                                st.metric("📧 Batch Size Used", batch_size)
+                            
+                            st.success(f"✅ Successfully sent {records_to_process} emails!")
+                            st.info("All emails have been sent. Check your email logs for details.")
+                        
+                        except Exception as e:
+                            logger.error(f"Unfortunatly Emails are not sended: {e} ")
+                            raise Exception(f"Unfortunatly Emails are not sended: {e}") from e
+    else:
+        st.warning("⚠️ Please upload a CSV file first to proceed.")

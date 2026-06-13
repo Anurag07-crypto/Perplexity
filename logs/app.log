@@ -1,0 +1,2763 @@
+2026-06-12 08:20:22 | CRITICAL | perplexitiy.deep_research_agent | Missing API keys
+2026-06-12 08:37:20 | INFO     | RAG.vector_store | Store initialized
+2026-06-12 08:37:27 | INFO     | RAG.embedding_manager | Model Loaded Successfully: BAAI/bge-small-en-v1.5
+2026-06-13 12:49:20 | INFO     | RAG.vector_store | Store initialized
+2026-06-13 12:49:29 | INFO     | RAG.embedding_manager | Model Loaded Successfully: BAAI/bge-small-en-v1.5
+2026-06-13 12:54:38 | INFO     | perplexitiy.recruiter_agent | Generating email for query: 
+        you are an Professional Mail writer with over 10+ years of experience
+        you are mostly known as a person who sends mail to recruiter and get 100% success rate
+        Now Work Here:
+        Name - Anurag
+        Job description - AI Engineer
+
+Build and deploy AI/ML solutions, develop LLM-powered applications, optimize models, and collaborate with cross-functional teams. Requires Python, machine learning, deep learning frameworks, and cloud platform experience.
+        ----------------------------------
+        adjust mail according to the job description and my skills
+        My Skills-
+        Python
+        Machine Learning
+        Artificial Intelligence
+        Pytorch
+        TensorFlow
+        Pandas and Numpy
+        -----------------------------------
+        Make sure that use proper spacing and format 
+        
+2026-06-13 12:54:38 | INFO     | perplexitiy.recruiter_agent | Sending email to: vanuragkumardesai@gmail.com
+2026-06-13 12:54:38 | INFO     | perplexitiy.recruiter_agent | Invoking LLM to generate email...
+2026-06-13 12:54:42 | ERROR    | perplexitiy.recruiter_agent | Email sending failed: Invalid json output: Here's a well-crafted email that highlights your skills and experience as an AI Engineer, tailored to the job description:
+
+**Subject: Application for AI Engineer Position**
+
+Dear Hiring Manager,
+
+I am writing to express my interest in the AI Engineer position at [Company Name]. As a seasoned professional with over 10+ years of experience in building and deploying AI/ML solutions, I am confident that I possess the skills and expertise required to excel in this role.
+
+With a strong background in machine learning, artificial intelligence, and deep learning frameworks, I have developed a passion for creating innovative applications that drive business value. My proficiency in Python, PyTorch, and TensorFlow enables me to design, develop, and optimize complex AI models with ease. Additionally, my expertise in pandas and numpy facilitates seamless data manipulation and analysis.
+
+Throughout my career, I have successfully collaborated with cross-functional teams to deliver high-impact projects that meet and exceed client expectations. My experience in cloud platforms has allowed me to deploy scalable and secure AI solutions that drive business growth.
+
+Some of my key strengths include:
+
+* **AI/ML Solution Development**: I have a proven track record of designing and developing custom AI/ML solutions that meet specific business needs.
+* **LLM-Powered Applications**: I have experience in developing applications that leverage large language models (LLMs) to drive business value.
+* **Model Optimization**: I am well-versed in optimizing AI models for improved performance, scalability, and efficiency.
+* **Cloud Platform Expertise**: I have experience in deploying AI solutions on cloud platforms, ensuring scalability, security, and reliability.
+
+I am excited about the opportunity to bring my skills and experience to [Company Name] and contribute to the success of your team. I have attached my resume for your review, which provides a more detailed account of my qualifications.
+
+Thank you for considering my application. I look forward to the opportunity to discuss my qualifications further and explore how I can contribute to the success of [Company Name].
+
+Best regards,
+
+Anurag
+AI Engineer
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langchain/errors/OUTPUT_PARSING_FAILURE 
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\Desktop\RAG_&_Automation_projects\Perplexitiy_mini\Perplexity\.venv\Lib\site-packages\langchain_core\output_parsers\json.py", line 88, in parse_result
+    return parse_json_markdown(text)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\RAG_&_Automation_projects\Perplexitiy_mini\Perplexity\.venv\Lib\site-packages\langchain_core\utils\json.py", line 163, in parse_json_markdown
+    return _parse_json(json_str, parser=parser)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\RAG_&_Automation_projects\Perplexitiy_mini\Perplexity\.venv\Lib\site-packages\langchain_core\utils\json.py", line 191, in _parse_json
+    return parser(json_str)
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\RAG_&_Automation_projects\Perplexitiy_mini\Perplexity\.venv\Lib\site-packages\langchain_core\utils\json.py", line 136, in parse_partial_json
+    return json.loads(s, strict=strict)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\json\__init__.py", line 359, in loads
+    return cls(**kw).decode(s)
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\Desktop\RAG_&_Automation_projects\Perplexitiy_mini\Perplexity\perplexitiy\recruiter_agent.py", line 65, in mail_sender
+    data = self.parser.parse(response.content)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\RAG_&_Automation_projects\Perplexitiy_mini\Perplexity\.venv\Lib\site-packages\langchain_core\output_parsers\json.py", line 102, in parse
+    return self.parse_result([Generation(text=text)])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\RAG_&_Automation_projects\Perplexitiy_mini\Perplexity\.venv\Lib\site-packages\langchain_core\output_parsers\json.py", line 91, in parse_result
+    raise OutputParserException(msg, llm_output=text) from e
+langchain_core.exceptions.OutputParserException: Invalid json output: Here's a well-crafted email that highlights your skills and experience as an AI Engineer, tailored to the job description:
+
+**Subject: Application for AI Engineer Position**
+
+Dear Hiring Manager,
+
+I am writing to express my interest in the AI Engineer position at [Company Name]. As a seasoned professional with over 10+ years of experience in building and deploying AI/ML solutions, I am confident that I possess the skills and expertise required to excel in this role.
+
+With a strong background in machine learning, artificial intelligence, and deep learning frameworks, I have developed a passion for creating innovative applications that drive business value. My proficiency in Python, PyTorch, and TensorFlow enables me to design, develop, and optimize complex AI models with ease. Additionally, my expertise in pandas and numpy facilitates seamless data manipulation and analysis.
+
+Throughout my career, I have successfully collaborated with cross-functional teams to deliver high-impact projects that meet and exceed client expectations. My experience in cloud platforms has allowed me to deploy scalable and secure AI solutions that drive business growth.
+
+Some of my key strengths include:
+
+* **AI/ML Solution Development**: I have a proven track record of designing and developing custom AI/ML solutions that meet specific business needs.
+* **LLM-Powered Applications**: I have experience in developing applications that leverage large language models (LLMs) to drive business value.
+* **Model Optimization**: I am well-versed in optimizing AI models for improved performance, scalability, and efficiency.
+* **Cloud Platform Expertise**: I have experience in deploying AI solutions on cloud platforms, ensuring scalability, security, and reliability.
+
+I am excited about the opportunity to bring my skills and experience to [Company Name] and contribute to the success of your team. I have attached my resume for your review, which provides a more detailed account of my qualifications.
+
+Thank you for considering my application. I look forward to the opportunity to discuss my qualifications further and explore how I can contribute to the success of [Company Name].
+
+Best regards,
+
+Anurag
+AI Engineer
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langchain/errors/OUTPUT_PARSING_FAILURE 
+2026-06-13 12:54:42 | INFO     | perplexitiy.recruiter_agent | Generating email for query: 
+        you are an Professional Mail writer with over 10+ years of experience
+        you are mostly known as a person who sends mail to recruiter and get 100% success rate
+        Now Work Here:
+        Name - Anuu
+        Job description - Full Stack Developer
+
+Develop and maintain front-end and back-end applications, build APIs, manage databases, and ensure application performance and security. Requires JavaScript/TypeScript, React, Node.js, and database knowledge.
+        ----------------------------------
+        adjust mail according to the job description and my skills
+        My Skills-
+        Python
+        Machine Learning
+        Artificial Intelligence
+        Pytorch
+        TensorFlow
+        Pandas and Numpy
+        -----------------------------------
+        Make sure that use proper spacing and format 
+        
+2026-06-13 12:54:42 | INFO     | perplexitiy.recruiter_agent | Sending email to: gameranurag24@gmail.com
+2026-06-13 12:54:42 | INFO     | perplexitiy.recruiter_agent | Invoking LLM to generate email...
+2026-06-13 12:54:43 | ERROR    | perplexitiy.recruiter_agent | Email sending failed: Invalid json output: **Application for Full Stack Developer Position**
+
+**Dear Hiring Manager,**
+
+I am writing to express my enthusiastic interest in the Full Stack Developer position at your esteemed organization. As a seasoned professional with over 10+ years of experience, I am confident that my skills and expertise align perfectly with the job requirements.
+
+**About Me:**
+
+As a seasoned Full Stack Developer, I have a proven track record of delivering high-quality applications that meet and exceed expectations. My expertise spans front-end and back-end development, API building, database management, and ensuring application performance and security.
+
+**Key Skills:**
+
+- **Front-end Development:** Proficient in creating engaging user interfaces using JavaScript and libraries like React.
+- **Back-end Development:** Experienced in building robust APIs using Node.js and managing databases.
+- **Database Management:** Skilled in managing and optimizing database performance.
+- **Application Performance and Security:** Adept at ensuring high-performance and secure applications.
+
+**Why I'm the Perfect Fit:**
+
+While my skills align with the job requirements, I'd like to highlight that I specialize in Python, Machine Learning, Artificial Intelligence, PyTorch, TensorFlow, Pandas, and Numpy. Although the job description mentions JavaScript, React, Node.js, and database knowledge, I am confident that my transferable skills will enable me to quickly adapt to the required technologies.
+
+**My Approach:**
+
+As a Full Stack Developer, I follow an Agile development methodology, working closely with cross-functional teams to deliver high-quality applications that meet and exceed expectations. I am well-versed in design patterns, coding standards, and best practices, ensuring maintainable, efficient, and scalable code.
+
+**Why Choose Me:**
+
+With a 100% success rate in sending mail to recruiters, I am confident that I can bring value to your organization. My passion for Full Stack Development, combined with my expertise in Machine Learning, Artificial Intelligence, and Python, makes me an ideal candidate for this role.
+
+**Conclusion:**
+
+I am excited about the opportunity to discuss my application and how I can contribute to your organization's success. Thank you for considering my application. I look forward to the opportunity to meet and discuss how my skills and expertise align with your team's needs.
+
+**Sincerely,**
+Anuu
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langchain/errors/OUTPUT_PARSING_FAILURE 
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\Desktop\RAG_&_Automation_projects\Perplexitiy_mini\Perplexity\.venv\Lib\site-packages\langchain_core\output_parsers\json.py", line 88, in parse_result
+    return parse_json_markdown(text)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\RAG_&_Automation_projects\Perplexitiy_mini\Perplexity\.venv\Lib\site-packages\langchain_core\utils\json.py", line 163, in parse_json_markdown
+    return _parse_json(json_str, parser=parser)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\RAG_&_Automation_projects\Perplexitiy_mini\Perplexity\.venv\Lib\site-packages\langchain_core\utils\json.py", line 191, in _parse_json
+    return parser(json_str)
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\RAG_&_Automation_projects\Perplexitiy_mini\Perplexity\.venv\Lib\site-packages\langchain_core\utils\json.py", line 136, in parse_partial_json
+    return json.loads(s, strict=strict)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\json\__init__.py", line 359, in loads
+    return cls(**kw).decode(s)
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\Desktop\RAG_&_Automation_projects\Perplexitiy_mini\Perplexity\perplexitiy\recruiter_agent.py", line 65, in mail_sender
+    data = self.parser.parse(response.content)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\RAG_&_Automation_projects\Perplexitiy_mini\Perplexity\.venv\Lib\site-packages\langchain_core\output_parsers\json.py", line 102, in parse
+    return self.parse_result([Generation(text=text)])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\RAG_&_Automation_projects\Perplexitiy_mini\Perplexity\.venv\Lib\site-packages\langchain_core\output_parsers\json.py", line 91, in parse_result
+    raise OutputParserException(msg, llm_output=text) from e
+langchain_core.exceptions.OutputParserException: Invalid json output: **Application for Full Stack Developer Position**
+
+**Dear Hiring Manager,**
+
+I am writing to express my enthusiastic interest in the Full Stack Developer position at your esteemed organization. As a seasoned professional with over 10+ years of experience, I am confident that my skills and expertise align perfectly with the job requirements.
+
+**About Me:**
+
+As a seasoned Full Stack Developer, I have a proven track record of delivering high-quality applications that meet and exceed expectations. My expertise spans front-end and back-end development, API building, database management, and ensuring application performance and security.
+
+**Key Skills:**
+
+- **Front-end Development:** Proficient in creating engaging user interfaces using JavaScript and libraries like React.
+- **Back-end Development:** Experienced in building robust APIs using Node.js and managing databases.
+- **Database Management:** Skilled in managing and optimizing database performance.
+- **Application Performance and Security:** Adept at ensuring high-performance and secure applications.
+
+**Why I'm the Perfect Fit:**
+
+While my skills align with the job requirements, I'd like to highlight that I specialize in Python, Machine Learning, Artificial Intelligence, PyTorch, TensorFlow, Pandas, and Numpy. Although the job description mentions JavaScript, React, Node.js, and database knowledge, I am confident that my transferable skills will enable me to quickly adapt to the required technologies.
+
+**My Approach:**
+
+As a Full Stack Developer, I follow an Agile development methodology, working closely with cross-functional teams to deliver high-quality applications that meet and exceed expectations. I am well-versed in design patterns, coding standards, and best practices, ensuring maintainable, efficient, and scalable code.
+
+**Why Choose Me:**
+
+With a 100% success rate in sending mail to recruiters, I am confident that I can bring value to your organization. My passion for Full Stack Development, combined with my expertise in Machine Learning, Artificial Intelligence, and Python, makes me an ideal candidate for this role.
+
+**Conclusion:**
+
+I am excited about the opportunity to discuss my application and how I can contribute to your organization's success. Thank you for considering my application. I look forward to the opportunity to meet and discuss how my skills and expertise align with your team's needs.
+
+**Sincerely,**
+Anuu
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langchain/errors/OUTPUT_PARSING_FAILURE 
+2026-06-13 12:54:44 | INFO     | perplexitiy.recruiter_agent | Generating email for query: 
+        you are an Professional Mail writer with over 10+ years of experience
+        you are mostly known as a person who sends mail to recruiter and get 100% success rate
+        Now Work Here:
+        Name - Kshitiz
+        Job description - Data Analyst
+
+Analyze data, create dashboards, generate insights, and support business decisions through reporting and visualization. Requires SQL, Excel, Power BI/Tableau, and strong analytical skills.
+        ----------------------------------
+        adjust mail according to the job description and my skills
+        My Skills-
+        Python
+        Machine Learning
+        Artificial Intelligence
+        Pytorch
+        TensorFlow
+        Pandas and Numpy
+        -----------------------------------
+        Make sure that use proper spacing and format 
+        
+2026-06-13 12:54:44 | INFO     | perplexitiy.recruiter_agent | Sending email to: anuragbusiness819@gmail.com
+2026-06-13 12:54:44 | INFO     | perplexitiy.recruiter_agent | Invoking LLM to generate email...
+2026-06-13 12:54:45 | ERROR    | perplexitiy.recruiter_agent | Email sending failed: Invalid json output: Here's an updated version of the mail that highlights your relevant skills and experience:
+
+
+Subject: Application for Data Analyst Position
+
+
+Dear [Recruiter's Name],
+
+I am excited to apply for the Data Analyst position at [Company Name]. With over 10+ years of experience in sending targeted and effective mail, I am confident that my skills and expertise make me an ideal candidate for this role.
+
+
+As a seasoned professional with a strong background in analytics, I possess the technical expertise to analyze complex data sets, create engaging dashboards, and generate actionable insights. My proficiency in SQL, Excel, and data visualization tools such as Power BI/Tableau enables me to extract valuable information from data and present it in a clear and concise manner.
+
+
+Furthermore, my expertise in Python, Machine Learning, Artificial Intelligence, PyTorch, TensorFlow, Pandas, and Numpy allows me to delve deeper into the data and uncover hidden patterns and trends. My experience with these technologies has enabled me to develop predictive models, automate data processing, and improve overall data quality.
+
+
+As a Data Analyst, I am well-equipped to support business decisions through reporting and visualization. I understand the importance of data-driven insights and am committed to delivering high-quality results that drive business growth.
+
+
+Some of my key skills and qualifications include:
+
+- Proficiency in SQL, Excel, and data visualization tools such as Power BI/Tableau
+- Expertise in Python, Machine Learning, Artificial Intelligence, PyTorch, TensorFlow, Pandas, and Numpy
+- Strong analytical skills with the ability to analyze complex data sets
+- Experience with data mining, data modeling, and predictive analytics
+- Excellent communication skills with the ability to present complex data insights in a clear and concise manner
+
+
+I would welcome the opportunity to discuss my qualifications further and explain in greater detail why I am the ideal candidate for this position. Please feel free to contact me at [Your Email Address] or [Your Phone Number].
+
+Thank you for considering my application. I look forward to the opportunity to contribute to [Company Name] and drive business success through data-driven insights.
+
+
+Best regards,
+
+Kshitiz
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langchain/errors/OUTPUT_PARSING_FAILURE 
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\Desktop\RAG_&_Automation_projects\Perplexitiy_mini\Perplexity\.venv\Lib\site-packages\langchain_core\output_parsers\json.py", line 88, in parse_result
+    return parse_json_markdown(text)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\RAG_&_Automation_projects\Perplexitiy_mini\Perplexity\.venv\Lib\site-packages\langchain_core\utils\json.py", line 163, in parse_json_markdown
+    return _parse_json(json_str, parser=parser)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\RAG_&_Automation_projects\Perplexitiy_mini\Perplexity\.venv\Lib\site-packages\langchain_core\utils\json.py", line 191, in _parse_json
+    return parser(json_str)
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\RAG_&_Automation_projects\Perplexitiy_mini\Perplexity\.venv\Lib\site-packages\langchain_core\utils\json.py", line 136, in parse_partial_json
+    return json.loads(s, strict=strict)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\json\__init__.py", line 359, in loads
+    return cls(**kw).decode(s)
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\Desktop\RAG_&_Automation_projects\Perplexitiy_mini\Perplexity\perplexitiy\recruiter_agent.py", line 65, in mail_sender
+    data = self.parser.parse(response.content)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\RAG_&_Automation_projects\Perplexitiy_mini\Perplexity\.venv\Lib\site-packages\langchain_core\output_parsers\json.py", line 102, in parse
+    return self.parse_result([Generation(text=text)])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\RAG_&_Automation_projects\Perplexitiy_mini\Perplexity\.venv\Lib\site-packages\langchain_core\output_parsers\json.py", line 91, in parse_result
+    raise OutputParserException(msg, llm_output=text) from e
+langchain_core.exceptions.OutputParserException: Invalid json output: Here's an updated version of the mail that highlights your relevant skills and experience:
+
+
+Subject: Application for Data Analyst Position
+
+
+Dear [Recruiter's Name],
+
+I am excited to apply for the Data Analyst position at [Company Name]. With over 10+ years of experience in sending targeted and effective mail, I am confident that my skills and expertise make me an ideal candidate for this role.
+
+
+As a seasoned professional with a strong background in analytics, I possess the technical expertise to analyze complex data sets, create engaging dashboards, and generate actionable insights. My proficiency in SQL, Excel, and data visualization tools such as Power BI/Tableau enables me to extract valuable information from data and present it in a clear and concise manner.
+
+
+Furthermore, my expertise in Python, Machine Learning, Artificial Intelligence, PyTorch, TensorFlow, Pandas, and Numpy allows me to delve deeper into the data and uncover hidden patterns and trends. My experience with these technologies has enabled me to develop predictive models, automate data processing, and improve overall data quality.
+
+
+As a Data Analyst, I am well-equipped to support business decisions through reporting and visualization. I understand the importance of data-driven insights and am committed to delivering high-quality results that drive business growth.
+
+
+Some of my key skills and qualifications include:
+
+- Proficiency in SQL, Excel, and data visualization tools such as Power BI/Tableau
+- Expertise in Python, Machine Learning, Artificial Intelligence, PyTorch, TensorFlow, Pandas, and Numpy
+- Strong analytical skills with the ability to analyze complex data sets
+- Experience with data mining, data modeling, and predictive analytics
+- Excellent communication skills with the ability to present complex data insights in a clear and concise manner
+
+
+I would welcome the opportunity to discuss my qualifications further and explain in greater detail why I am the ideal candidate for this position. Please feel free to contact me at [Your Email Address] or [Your Phone Number].
+
+Thank you for considering my application. I look forward to the opportunity to contribute to [Company Name] and drive business success through data-driven insights.
+
+
+Best regards,
+
+Kshitiz
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langchain/errors/OUTPUT_PARSING_FAILURE 
+2026-06-13 12:54:45 | INFO     | perplexitiy.recruiter_agent | All mails send to the user
+2026-06-13 12:58:29 | INFO     | RAG.vector_store | Store initialized
+2026-06-13 12:58:35 | INFO     | RAG.embedding_manager | Model Loaded Successfully: BAAI/bge-small-en-v1.5
+2026-06-13 12:59:03 | INFO     | perplexitiy.recruiter_agent | Generating email for query: 
+        you are an Professional Mail writer with over 10+ years of experience
+        you are mostly known as a person who sends mail to recruiter and get 100% success rate
+        Now Work Here:
+        Name - Anurag
+        Job description - AI Engineer
+
+Build and deploy AI/ML solutions, develop LLM-powered applications, optimize models, and collaborate with cross-functional teams. Requires Python, machine learning, deep learning frameworks, and cloud platform experience.
+        ----------------------------------
+        adjust mail according to the job description and my skills
+        My Skills-
+        Python
+        Machine Learning
+        Artificial Intelligence
+        Pytorch
+        TensorFlow
+        Pandas and Numpy
+        -----------------------------------
+        Make sure that use proper spacing and format 
+        
+2026-06-13 12:59:03 | INFO     | perplexitiy.recruiter_agent | Sending email to: vanuragkumardesai@gmail.com
+2026-06-13 12:59:03 | INFO     | perplexitiy.recruiter_agent | Invoking LLM to generate email...
+2026-06-13 12:59:03 | ERROR    | perplexitiy.recruiter_agent | Email sending failed: Invalid json output: **Confidential**
+
+**Anurag**
+**AI Engineer**
+
+**[Your Email Address]**
+**[Your Phone Number]**
+**[Your LinkedIn Profile (optional)]**
+
+**Date:** [Current Date]
+
+**[Recipient's Name]**
+**[Recipient's Title]**
+**[Company Name]**
+**[Company Address]**
+
+Dear [Recipient's Name],
+
+I am writing to express my interest in the AI Engineer position at [Company Name]. As a seasoned AI professional with over 10 years of experience in building and deploying AI/ML solutions, I am confident that my skills and expertise align with the job requirements.
+
+With a strong foundation in machine learning and deep learning frameworks, I have a proven track record of developing and optimizing AI-powered applications. My proficiency in Python, along with my expertise in PyTorch and TensorFlow, enables me to design and implement complex models that drive business value. My experience with Pandas and NumPy has also allowed me to efficiently manipulate and analyze large datasets.
+
+Some of my key achievements include:
+
+* Developing and deploying LLM-powered applications that improve customer engagement and retention
+* Optimizing machine learning models to achieve high accuracy and efficiency
+* Collaborating with cross-functional teams to design and implement AI-powered solutions
+* Building and deploying scalable AI/ML pipelines using cloud platforms
+
+I am particularly drawn to this role at [Company Name] because of the opportunity to work on cutting-edge AI/ML projects and contribute to the company's innovation strategy. My passion for AI and machine learning, combined with my strong work ethic and collaborative approach, make me an ideal fit for this position.
+
+I would welcome the opportunity to discuss my application and how my skills and experience align with the job requirements. Please feel free to contact me at [Your Email Address] or [Your Phone Number].
+
+Thank you for considering my application.
+
+Sincerely,
+
+Anurag
+AI Engineer
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langchain/errors/OUTPUT_PARSING_FAILURE 
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\Desktop\RAG_&_Automation_projects\Perplexitiy_mini\Perplexity\.venv\Lib\site-packages\langchain_core\output_parsers\json.py", line 88, in parse_result
+    return parse_json_markdown(text)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\RAG_&_Automation_projects\Perplexitiy_mini\Perplexity\.venv\Lib\site-packages\langchain_core\utils\json.py", line 163, in parse_json_markdown
+    return _parse_json(json_str, parser=parser)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\RAG_&_Automation_projects\Perplexitiy_mini\Perplexity\.venv\Lib\site-packages\langchain_core\utils\json.py", line 191, in _parse_json
+    return parser(json_str)
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\RAG_&_Automation_projects\Perplexitiy_mini\Perplexity\.venv\Lib\site-packages\langchain_core\utils\json.py", line 136, in parse_partial_json
+    return json.loads(s, strict=strict)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\json\__init__.py", line 359, in loads
+    return cls(**kw).decode(s)
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\Desktop\RAG_&_Automation_projects\Perplexitiy_mini\Perplexity\perplexitiy\recruiter_agent.py", line 65, in mail_sender
+  File "C:\Users\Lenovo\Desktop\RAG_&_Automation_projects\Perplexitiy_mini\Perplexity\.venv\Lib\site-packages\langchain_core\output_parsers\json.py", line 102, in parse
+    return self.parse_result([Generation(text=text)])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\RAG_&_Automation_projects\Perplexitiy_mini\Perplexity\.venv\Lib\site-packages\langchain_core\output_parsers\json.py", line 91, in parse_result
+    raise OutputParserException(msg, llm_output=text) from e
+langchain_core.exceptions.OutputParserException: Invalid json output: **Confidential**
+
+**Anurag**
+**AI Engineer**
+
+**[Your Email Address]**
+**[Your Phone Number]**
+**[Your LinkedIn Profile (optional)]**
+
+**Date:** [Current Date]
+
+**[Recipient's Name]**
+**[Recipient's Title]**
+**[Company Name]**
+**[Company Address]**
+
+Dear [Recipient's Name],
+
+I am writing to express my interest in the AI Engineer position at [Company Name]. As a seasoned AI professional with over 10 years of experience in building and deploying AI/ML solutions, I am confident that my skills and expertise align with the job requirements.
+
+With a strong foundation in machine learning and deep learning frameworks, I have a proven track record of developing and optimizing AI-powered applications. My proficiency in Python, along with my expertise in PyTorch and TensorFlow, enables me to design and implement complex models that drive business value. My experience with Pandas and NumPy has also allowed me to efficiently manipulate and analyze large datasets.
+
+Some of my key achievements include:
+
+* Developing and deploying LLM-powered applications that improve customer engagement and retention
+* Optimizing machine learning models to achieve high accuracy and efficiency
+* Collaborating with cross-functional teams to design and implement AI-powered solutions
+* Building and deploying scalable AI/ML pipelines using cloud platforms
+
+I am particularly drawn to this role at [Company Name] because of the opportunity to work on cutting-edge AI/ML projects and contribute to the company's innovation strategy. My passion for AI and machine learning, combined with my strong work ethic and collaborative approach, make me an ideal fit for this position.
+
+I would welcome the opportunity to discuss my application and how my skills and experience align with the job requirements. Please feel free to contact me at [Your Email Address] or [Your Phone Number].
+
+Thank you for considering my application.
+
+Sincerely,
+
+Anurag
+AI Engineer
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langchain/errors/OUTPUT_PARSING_FAILURE 
+2026-06-13 12:59:04 | INFO     | perplexitiy.recruiter_agent | Generating email for query: 
+        you are an Professional Mail writer with over 10+ years of experience
+        you are mostly known as a person who sends mail to recruiter and get 100% success rate
+        Now Work Here:
+        Name - Anuu
+        Job description - Full Stack Developer
+
+Develop and maintain front-end and back-end applications, build APIs, manage databases, and ensure application performance and security. Requires JavaScript/TypeScript, React, Node.js, and database knowledge.
+        ----------------------------------
+        adjust mail according to the job description and my skills
+        My Skills-
+        Python
+        Machine Learning
+        Artificial Intelligence
+        Pytorch
+        TensorFlow
+        Pandas and Numpy
+        -----------------------------------
+        Make sure that use proper spacing and format 
+        
+2026-06-13 12:59:04 | INFO     | perplexitiy.recruiter_agent | Sending email to: gameranurag24@gmail.com
+2026-06-13 12:59:04 | INFO     | perplexitiy.recruiter_agent | Invoking LLM to generate email...
+2026-06-13 12:59:05 | ERROR    | perplexitiy.recruiter_agent | Email sending failed: Invalid json output: Here's a sample cover letter tailored to the job description and your skills:
+
+[Your Address]
+[City, State ZIP Code]
+[Date]
+
+[Recipient's Name]
+[Recipient's Title]
+[Company Name]
+[Company Address]
+[City, State ZIP Code]
+
+Dear [Recipient's Name],
+
+I am writing to express my enthusiastic interest in the Full Stack Developer position at [Company Name]. As a highly motivated and skilled professional with over 10+ years of experience in software development, I am confident that I can bring significant value to your team.
+
+With my expertise in developing and maintaining complex applications, I possess a unique blend of technical skills that align perfectly with the requirements of this role. Notably, I have in-depth knowledge of Python, which has been my primary programming language throughout my career. My proficiency in Python, coupled with my experience in machine learning and artificial intelligence, enables me to build innovative solutions that drive business growth.
+
+My technical expertise includes:
+
+- **Machine Learning/AI**: I have a strong foundation in machine learning and artificial intelligence, with hands-on experience in building and deploying predictive models using PyTorch and TensorFlow. These skills have allowed me to develop applications that can analyze complex data patterns and make informed decisions.
+
+- **Data Analysis**: I am well-versed in data analysis, with expertise in libraries such as Pandas and Numpy. This enables me to efficiently manipulate and analyze large datasets, providing actionable insights that inform business decisions.
+
+- **Full Stack Development**: My experience in full stack development has equipped me with the skills to design, develop, and deploy robust applications. I have a strong understanding of back-end development, including database management, and front-end development using JavaScript/TypeScript.
+
+- **API Development**: I have a solid grasp of API development, having built multiple APIs using Node.js and React. These APIs have enabled seamless data exchange between systems, facilitating real-time data synchronization and improving overall system performance.
+
+I am confident that my unique blend of technical skills, experience, and passion for innovation make me an ideal candidate for this role. I would be thrilled to bring my expertise to [Company Name] and contribute to the development of cutting-edge applications that drive business success.
+
+Thank you for considering my application. I look forward to discussing this opportunity further and exploring how my skills can align with the needs of your team.
+
+Sincerely,
+
+Anuu
+Full Stack Developer
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langchain/errors/OUTPUT_PARSING_FAILURE 
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\Desktop\RAG_&_Automation_projects\Perplexitiy_mini\Perplexity\.venv\Lib\site-packages\langchain_core\output_parsers\json.py", line 88, in parse_result
+    return parse_json_markdown(text)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\RAG_&_Automation_projects\Perplexitiy_mini\Perplexity\.venv\Lib\site-packages\langchain_core\utils\json.py", line 163, in parse_json_markdown
+    return _parse_json(json_str, parser=parser)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\RAG_&_Automation_projects\Perplexitiy_mini\Perplexity\.venv\Lib\site-packages\langchain_core\utils\json.py", line 191, in _parse_json
+    return parser(json_str)
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\RAG_&_Automation_projects\Perplexitiy_mini\Perplexity\.venv\Lib\site-packages\langchain_core\utils\json.py", line 136, in parse_partial_json
+    return json.loads(s, strict=strict)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\json\__init__.py", line 359, in loads
+    return cls(**kw).decode(s)
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\Desktop\RAG_&_Automation_projects\Perplexitiy_mini\Perplexity\perplexitiy\recruiter_agent.py", line 65, in mail_sender
+  File "C:\Users\Lenovo\Desktop\RAG_&_Automation_projects\Perplexitiy_mini\Perplexity\.venv\Lib\site-packages\langchain_core\output_parsers\json.py", line 102, in parse
+    return self.parse_result([Generation(text=text)])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\RAG_&_Automation_projects\Perplexitiy_mini\Perplexity\.venv\Lib\site-packages\langchain_core\output_parsers\json.py", line 91, in parse_result
+    raise OutputParserException(msg, llm_output=text) from e
+langchain_core.exceptions.OutputParserException: Invalid json output: Here's a sample cover letter tailored to the job description and your skills:
+
+[Your Address]
+[City, State ZIP Code]
+[Date]
+
+[Recipient's Name]
+[Recipient's Title]
+[Company Name]
+[Company Address]
+[City, State ZIP Code]
+
+Dear [Recipient's Name],
+
+I am writing to express my enthusiastic interest in the Full Stack Developer position at [Company Name]. As a highly motivated and skilled professional with over 10+ years of experience in software development, I am confident that I can bring significant value to your team.
+
+With my expertise in developing and maintaining complex applications, I possess a unique blend of technical skills that align perfectly with the requirements of this role. Notably, I have in-depth knowledge of Python, which has been my primary programming language throughout my career. My proficiency in Python, coupled with my experience in machine learning and artificial intelligence, enables me to build innovative solutions that drive business growth.
+
+My technical expertise includes:
+
+- **Machine Learning/AI**: I have a strong foundation in machine learning and artificial intelligence, with hands-on experience in building and deploying predictive models using PyTorch and TensorFlow. These skills have allowed me to develop applications that can analyze complex data patterns and make informed decisions.
+
+- **Data Analysis**: I am well-versed in data analysis, with expertise in libraries such as Pandas and Numpy. This enables me to efficiently manipulate and analyze large datasets, providing actionable insights that inform business decisions.
+
+- **Full Stack Development**: My experience in full stack development has equipped me with the skills to design, develop, and deploy robust applications. I have a strong understanding of back-end development, including database management, and front-end development using JavaScript/TypeScript.
+
+- **API Development**: I have a solid grasp of API development, having built multiple APIs using Node.js and React. These APIs have enabled seamless data exchange between systems, facilitating real-time data synchronization and improving overall system performance.
+
+I am confident that my unique blend of technical skills, experience, and passion for innovation make me an ideal candidate for this role. I would be thrilled to bring my expertise to [Company Name] and contribute to the development of cutting-edge applications that drive business success.
+
+Thank you for considering my application. I look forward to discussing this opportunity further and exploring how my skills can align with the needs of your team.
+
+Sincerely,
+
+Anuu
+Full Stack Developer
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langchain/errors/OUTPUT_PARSING_FAILURE 
+2026-06-13 12:59:05 | INFO     | perplexitiy.recruiter_agent | Generating email for query: 
+        you are an Professional Mail writer with over 10+ years of experience
+        you are mostly known as a person who sends mail to recruiter and get 100% success rate
+        Now Work Here:
+        Name - Kshitiz
+        Job description - Data Analyst
+
+Analyze data, create dashboards, generate insights, and support business decisions through reporting and visualization. Requires SQL, Excel, Power BI/Tableau, and strong analytical skills.
+        ----------------------------------
+        adjust mail according to the job description and my skills
+        My Skills-
+        Python
+        Machine Learning
+        Artificial Intelligence
+        Pytorch
+        TensorFlow
+        Pandas and Numpy
+        -----------------------------------
+        Make sure that use proper spacing and format 
+        
+2026-06-13 12:59:05 | INFO     | perplexitiy.recruiter_agent | Sending email to: anuragbusiness819@gmail.com
+2026-06-13 12:59:05 | INFO     | perplexitiy.recruiter_agent | Invoking LLM to generate email...
+2026-06-13 12:59:07 | ERROR    | perplexitiy.recruiter_agent | Email sending failed: Invalid json output: **Subject: Application for Data Analyst Position**
+
+Dear [Hiring Manager's Name],
+
+I am writing to express my interest in the Data Analyst position at [Company Name]. With over 10+ years of experience in crafting compelling mail to recruiters, I am confident that my skills and expertise make me an ideal candidate for this role.
+
+**Summary of Qualifications:**
+
+As a seasoned data professional, I possess a unique blend of technical skills and business acumen that enable me to drive data-driven decisions. My expertise in data analysis, visualization, and machine learning has been honed through extensive experience with Python, PyTorch, TensorFlow, Pandas, and NumPy. My proficiency in these tools allows me to efficiently collect, process, and analyze complex data sets, providing actionable insights to stakeholders.
+
+**Technical Skills:**
+
+- **Programming Languages:** Python
+- **Machine Learning:** PyTorch, TensorFlow
+- **Data Analysis:** Pandas, NumPy
+- **Data Visualization:** Power BI/Tableau
+
+**Key Strengths:**
+
+- **Data Analysis:** I can collect, process, and analyze large datasets to extract insights and trends.
+- **Machine Learning:** I can develop and deploy machine learning models using PyTorch and TensorFlow to solve complex problems.
+- **Data Visualization:** I can create interactive and informative dashboards using Power BI/Tableau to communicate findings to stakeholders.
+- **SQL:** I can write efficient SQL queries to extract data from relational databases.
+
+**Why I'm the Best Fit:**
+
+My extensive experience in crafting compelling mail to recruiters has equipped me with the ability to effectively communicate complex ideas and technical expertise to non-technical stakeholders. I am confident that my unique blend of technical skills and business acumen makes me an ideal candidate for the Data Analyst position at [Company Name].
+
+**Next Steps:**
+
+I would welcome the opportunity to discuss my application and how I can contribute to [Company Name]'s success. Please feel free to contact me at [Your Email Address] or [Your Phone Number] to schedule a meeting.
+
+Thank you for considering my application.
+
+Best regards,
+
+Kshitiz
+Data Analyst
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langchain/errors/OUTPUT_PARSING_FAILURE 
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\Desktop\RAG_&_Automation_projects\Perplexitiy_mini\Perplexity\.venv\Lib\site-packages\langchain_core\output_parsers\json.py", line 88, in parse_result
+    return parse_json_markdown(text)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\RAG_&_Automation_projects\Perplexitiy_mini\Perplexity\.venv\Lib\site-packages\langchain_core\utils\json.py", line 163, in parse_json_markdown
+    return _parse_json(json_str, parser=parser)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\RAG_&_Automation_projects\Perplexitiy_mini\Perplexity\.venv\Lib\site-packages\langchain_core\utils\json.py", line 191, in _parse_json
+    return parser(json_str)
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\RAG_&_Automation_projects\Perplexitiy_mini\Perplexity\.venv\Lib\site-packages\langchain_core\utils\json.py", line 136, in parse_partial_json
+    return json.loads(s, strict=strict)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\json\__init__.py", line 359, in loads
+    return cls(**kw).decode(s)
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\Desktop\RAG_&_Automation_projects\Perplexitiy_mini\Perplexity\perplexitiy\recruiter_agent.py", line 65, in mail_sender
+  File "C:\Users\Lenovo\Desktop\RAG_&_Automation_projects\Perplexitiy_mini\Perplexity\.venv\Lib\site-packages\langchain_core\output_parsers\json.py", line 102, in parse
+    return self.parse_result([Generation(text=text)])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\RAG_&_Automation_projects\Perplexitiy_mini\Perplexity\.venv\Lib\site-packages\langchain_core\output_parsers\json.py", line 91, in parse_result
+    raise OutputParserException(msg, llm_output=text) from e
+langchain_core.exceptions.OutputParserException: Invalid json output: **Subject: Application for Data Analyst Position**
+
+Dear [Hiring Manager's Name],
+
+I am writing to express my interest in the Data Analyst position at [Company Name]. With over 10+ years of experience in crafting compelling mail to recruiters, I am confident that my skills and expertise make me an ideal candidate for this role.
+
+**Summary of Qualifications:**
+
+As a seasoned data professional, I possess a unique blend of technical skills and business acumen that enable me to drive data-driven decisions. My expertise in data analysis, visualization, and machine learning has been honed through extensive experience with Python, PyTorch, TensorFlow, Pandas, and NumPy. My proficiency in these tools allows me to efficiently collect, process, and analyze complex data sets, providing actionable insights to stakeholders.
+
+**Technical Skills:**
+
+- **Programming Languages:** Python
+- **Machine Learning:** PyTorch, TensorFlow
+- **Data Analysis:** Pandas, NumPy
+- **Data Visualization:** Power BI/Tableau
+
+**Key Strengths:**
+
+- **Data Analysis:** I can collect, process, and analyze large datasets to extract insights and trends.
+- **Machine Learning:** I can develop and deploy machine learning models using PyTorch and TensorFlow to solve complex problems.
+- **Data Visualization:** I can create interactive and informative dashboards using Power BI/Tableau to communicate findings to stakeholders.
+- **SQL:** I can write efficient SQL queries to extract data from relational databases.
+
+**Why I'm the Best Fit:**
+
+My extensive experience in crafting compelling mail to recruiters has equipped me with the ability to effectively communicate complex ideas and technical expertise to non-technical stakeholders. I am confident that my unique blend of technical skills and business acumen makes me an ideal candidate for the Data Analyst position at [Company Name].
+
+**Next Steps:**
+
+I would welcome the opportunity to discuss my application and how I can contribute to [Company Name]'s success. Please feel free to contact me at [Your Email Address] or [Your Phone Number] to schedule a meeting.
+
+Thank you for considering my application.
+
+Best regards,
+
+Kshitiz
+Data Analyst
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langchain/errors/OUTPUT_PARSING_FAILURE 
+2026-06-13 12:59:07 | INFO     | perplexitiy.recruiter_agent | All mails send to the user
+2026-06-13 13:03:15 | INFO     | RAG.vector_store | Store initialized
+2026-06-13 13:03:21 | INFO     | RAG.embedding_manager | Model Loaded Successfully: BAAI/bge-small-en-v1.5
+2026-06-13 13:03:45 | INFO     | perplexitiy.recruiter_agent | Generating email for query: 
+        you are an Professional Mail writer with over 10+ years of experience
+        you are mostly known as a person who sends mail to recruiter and get 100% success rate
+        Now Work Here:
+        Name - Anurag
+        Job description - AI Engineer
+
+Build and deploy AI/ML solutions, develop LLM-powered applications, optimize models, and collaborate with cross-functional teams. Requires Python, machine learning, deep learning frameworks, and cloud platform experience.
+        ----------------------------------
+        adjust mail according to the job description and my skills
+        My Skills-
+        Python
+        Machine Learning
+        Artificial Intelligence
+        Pytorch
+        TensorFlow
+        Pandas and Numpy
+        -----------------------------------
+        Make sure that use proper spacing and format 
+        
+2026-06-13 13:03:45 | INFO     | perplexitiy.recruiter_agent | Sending email to: vanuragkumardesai@gmail.com
+2026-06-13 13:03:45 | INFO     | perplexitiy.recruiter_agent | Invoking LLM to generate email...
+2026-06-13 13:03:47 | ERROR    | perplexitiy.recruiter_agent | Email sending failed: Invalid json output: Here's a well-crafted cover letter tailored to the job description and your skills as an AI Engineer:
+
+**Anurag**
+**AI Engineer**
+
+**Contact Information:**
+
+- Email: [anurag@email.com](mailto:anurag@email.com)
+- Phone: 123-456-7890
+- LinkedIn: linkedin.com/in/anurag
+
+**Objective:**
+To leverage my expertise in Artificial Intelligence and Machine Learning to build and deploy AI/ML solutions that drive business growth and innovation.
+
+**Summary:**
+Highly motivated and experienced AI Engineer with over 10+ years of experience in developing and deploying AI/ML solutions. Skilled in building Large Language Model (LLM)-powered applications, optimizing models, and collaborating with cross-functional teams to drive project success.
+
+**Technical Skills:**
+
+- **Programming Languages:** Python
+- **Machine Learning Frameworks:** PyTorch, TensorFlow
+- **Data Science Libraries:** Pandas, Numpy
+- **Cloud Platforms:** Experienced in deploying AI/ML solutions on cloud platforms
+
+**Key Achievements:**
+
+- Developed and deployed multiple LLM-powered applications that achieved 95% accuracy in text classification tasks
+- Optimized machine learning models using techniques such as data augmentation, transfer learning, and hyperparameter tuning
+- Collaborated with cross-functional teams to integrate AI/ML solutions into business processes, resulting in a 30% increase in productivity
+
+**Professional Experience:**
+
+- **AI Engineer**, ABC Corporation (2018-Present)
+  - Designed and developed AI/ML solutions for image classification, natural language processing, and recommender systems
+  - Collaborated with data scientists to integrate AI/ML models into business processes
+  - Deployed AI/ML solutions on cloud platforms using AWS and Google Cloud
+
+- **Senior AI Engineer**, DEF Startups (2015-2018)
+  - Led a team of AI engineers in developing and deploying AI/ML solutions for computer vision and NLP tasks
+  - Developed and trained deep learning models using PyTorch and TensorFlow
+  - Collaborated with product managers to integrate AI/ML solutions into product roadmaps
+
+**Education:**
+
+- **Bachelor's/Master's Degree in Computer Science**, XYZ University (2010-2015)
+
+**Certifications:**
+
+- **Certified Data Scientist**, Data Science Council of America (2019)
+- **Certified AI Engineer**, Artificial Intelligence Council (2020)
+
+**References:**
+Available upon request.
+
+**Action Statement:**
+I am excited to apply my expertise in AI/ML to drive business growth and innovation at your organization. I look forward to the opportunity to discuss my qualifications further.
+
+**Sincerely,**
+Anurag
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langchain/errors/OUTPUT_PARSING_FAILURE 
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\Desktop\RAG_&_Automation_projects\Perplexitiy_mini\Perplexity\.venv\Lib\site-packages\langchain_core\output_parsers\json.py", line 88, in parse_result
+    return parse_json_markdown(text)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\RAG_&_Automation_projects\Perplexitiy_mini\Perplexity\.venv\Lib\site-packages\langchain_core\utils\json.py", line 163, in parse_json_markdown
+    return _parse_json(json_str, parser=parser)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\RAG_&_Automation_projects\Perplexitiy_mini\Perplexity\.venv\Lib\site-packages\langchain_core\utils\json.py", line 191, in _parse_json
+    return parser(json_str)
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\RAG_&_Automation_projects\Perplexitiy_mini\Perplexity\.venv\Lib\site-packages\langchain_core\utils\json.py", line 136, in parse_partial_json
+    return json.loads(s, strict=strict)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\json\__init__.py", line 359, in loads
+    return cls(**kw).decode(s)
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\Desktop\RAG_&_Automation_projects\Perplexitiy_mini\Perplexity\perplexitiy\recruiter_agent.py", line 65, in mail_sender
+    # Extract subject and body from the response text
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\RAG_&_Automation_projects\Perplexitiy_mini\Perplexity\.venv\Lib\site-packages\langchain_core\output_parsers\json.py", line 102, in parse
+    return self.parse_result([Generation(text=text)])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\RAG_&_Automation_projects\Perplexitiy_mini\Perplexity\.venv\Lib\site-packages\langchain_core\output_parsers\json.py", line 91, in parse_result
+    raise OutputParserException(msg, llm_output=text) from e
+langchain_core.exceptions.OutputParserException: Invalid json output: Here's a well-crafted cover letter tailored to the job description and your skills as an AI Engineer:
+
+**Anurag**
+**AI Engineer**
+
+**Contact Information:**
+
+- Email: [anurag@email.com](mailto:anurag@email.com)
+- Phone: 123-456-7890
+- LinkedIn: linkedin.com/in/anurag
+
+**Objective:**
+To leverage my expertise in Artificial Intelligence and Machine Learning to build and deploy AI/ML solutions that drive business growth and innovation.
+
+**Summary:**
+Highly motivated and experienced AI Engineer with over 10+ years of experience in developing and deploying AI/ML solutions. Skilled in building Large Language Model (LLM)-powered applications, optimizing models, and collaborating with cross-functional teams to drive project success.
+
+**Technical Skills:**
+
+- **Programming Languages:** Python
+- **Machine Learning Frameworks:** PyTorch, TensorFlow
+- **Data Science Libraries:** Pandas, Numpy
+- **Cloud Platforms:** Experienced in deploying AI/ML solutions on cloud platforms
+
+**Key Achievements:**
+
+- Developed and deployed multiple LLM-powered applications that achieved 95% accuracy in text classification tasks
+- Optimized machine learning models using techniques such as data augmentation, transfer learning, and hyperparameter tuning
+- Collaborated with cross-functional teams to integrate AI/ML solutions into business processes, resulting in a 30% increase in productivity
+
+**Professional Experience:**
+
+- **AI Engineer**, ABC Corporation (2018-Present)
+  - Designed and developed AI/ML solutions for image classification, natural language processing, and recommender systems
+  - Collaborated with data scientists to integrate AI/ML models into business processes
+  - Deployed AI/ML solutions on cloud platforms using AWS and Google Cloud
+
+- **Senior AI Engineer**, DEF Startups (2015-2018)
+  - Led a team of AI engineers in developing and deploying AI/ML solutions for computer vision and NLP tasks
+  - Developed and trained deep learning models using PyTorch and TensorFlow
+  - Collaborated with product managers to integrate AI/ML solutions into product roadmaps
+
+**Education:**
+
+- **Bachelor's/Master's Degree in Computer Science**, XYZ University (2010-2015)
+
+**Certifications:**
+
+- **Certified Data Scientist**, Data Science Council of America (2019)
+- **Certified AI Engineer**, Artificial Intelligence Council (2020)
+
+**References:**
+Available upon request.
+
+**Action Statement:**
+I am excited to apply my expertise in AI/ML to drive business growth and innovation at your organization. I look forward to the opportunity to discuss my qualifications further.
+
+**Sincerely,**
+Anurag
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langchain/errors/OUTPUT_PARSING_FAILURE 
+2026-06-13 13:03:47 | INFO     | perplexitiy.recruiter_agent | Generating email for query: 
+        you are an Professional Mail writer with over 10+ years of experience
+        you are mostly known as a person who sends mail to recruiter and get 100% success rate
+        Now Work Here:
+        Name - Anuu
+        Job description - Full Stack Developer
+
+Develop and maintain front-end and back-end applications, build APIs, manage databases, and ensure application performance and security. Requires JavaScript/TypeScript, React, Node.js, and database knowledge.
+        ----------------------------------
+        adjust mail according to the job description and my skills
+        My Skills-
+        Python
+        Machine Learning
+        Artificial Intelligence
+        Pytorch
+        TensorFlow
+        Pandas and Numpy
+        -----------------------------------
+        Make sure that use proper spacing and format 
+        
+2026-06-13 13:03:47 | INFO     | perplexitiy.recruiter_agent | Sending email to: gameranurag24@gmail.com
+2026-06-13 13:03:47 | INFO     | perplexitiy.recruiter_agent | Invoking LLM to generate email...
+2026-06-13 13:03:48 | ERROR    | perplexitiy.recruiter_agent | Email sending failed: Invalid json output: Here's an example of a job application mail tailored to the job description and your skills:
+
+Subject: Application for Full Stack Developer Position
+
+Dear Hiring Manager,
+
+I am writing to express my interest in the Full Stack Developer position at [Company Name]. With over a decade of experience in crafting compelling mail applications, I am confident that my skills and expertise make me an ideal fit for this role.
+
+As a seasoned developer, I possess a unique blend of front-end and back-end expertise, allowing me to develop and maintain robust applications that meet the needs of diverse stakeholders. My proficiency in JavaScript and TypeScript enables me to build high-performance front-end applications, while my knowledge of Node.js and database management systems ensures seamless back-end operations.
+
+Here are some key highlights of my skills and experience:
+
+**Technical Skills:**
+
+- **Programming Languages:** Python (Proficient)
+- **Machine Learning and Artificial Intelligence:** Experience in building and deploying ML and AI models using PyTorch and TensorFlow
+- **Data Science:** Proficient in Pandas and Numpy for data manipulation and analysis
+
+I understand that the job description requires experience in JavaScript, React, Node.js, and database management. While my primary expertise lies in Python, I am excited about the opportunity to bridge the gap and expand my skill set to meet the demands of this role. I am confident that my passion for learning, combined with my strong technical foundation, makes me an excellent candidate for this position.
+
+I am particularly drawn to this role because of the opportunity to work on a wide range of technologies, from front-end and back-end development to machine learning and data analysis. My experience in building scalable and secure applications, coupled with my ability to work in a fast-paced environment, makes me an ideal fit for this position.
+
+Thank you for considering my application. I would be thrilled to discuss my qualifications further and learn more about your team's work.
+
+Please find attached my resume for your review. I look forward to the opportunity to discuss this position further.
+
+Best regards,
+
+Anuu
+Full Stack Developer
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langchain/errors/OUTPUT_PARSING_FAILURE 
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\Desktop\RAG_&_Automation_projects\Perplexitiy_mini\Perplexity\.venv\Lib\site-packages\langchain_core\output_parsers\json.py", line 88, in parse_result
+    return parse_json_markdown(text)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\RAG_&_Automation_projects\Perplexitiy_mini\Perplexity\.venv\Lib\site-packages\langchain_core\utils\json.py", line 163, in parse_json_markdown
+    return _parse_json(json_str, parser=parser)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\RAG_&_Automation_projects\Perplexitiy_mini\Perplexity\.venv\Lib\site-packages\langchain_core\utils\json.py", line 191, in _parse_json
+    return parser(json_str)
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\RAG_&_Automation_projects\Perplexitiy_mini\Perplexity\.venv\Lib\site-packages\langchain_core\utils\json.py", line 136, in parse_partial_json
+    return json.loads(s, strict=strict)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\json\__init__.py", line 359, in loads
+    return cls(**kw).decode(s)
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\Desktop\RAG_&_Automation_projects\Perplexitiy_mini\Perplexity\perplexitiy\recruiter_agent.py", line 65, in mail_sender
+    # Extract subject and body from the response text
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\RAG_&_Automation_projects\Perplexitiy_mini\Perplexity\.venv\Lib\site-packages\langchain_core\output_parsers\json.py", line 102, in parse
+    return self.parse_result([Generation(text=text)])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\RAG_&_Automation_projects\Perplexitiy_mini\Perplexity\.venv\Lib\site-packages\langchain_core\output_parsers\json.py", line 91, in parse_result
+    raise OutputParserException(msg, llm_output=text) from e
+langchain_core.exceptions.OutputParserException: Invalid json output: Here's an example of a job application mail tailored to the job description and your skills:
+
+Subject: Application for Full Stack Developer Position
+
+Dear Hiring Manager,
+
+I am writing to express my interest in the Full Stack Developer position at [Company Name]. With over a decade of experience in crafting compelling mail applications, I am confident that my skills and expertise make me an ideal fit for this role.
+
+As a seasoned developer, I possess a unique blend of front-end and back-end expertise, allowing me to develop and maintain robust applications that meet the needs of diverse stakeholders. My proficiency in JavaScript and TypeScript enables me to build high-performance front-end applications, while my knowledge of Node.js and database management systems ensures seamless back-end operations.
+
+Here are some key highlights of my skills and experience:
+
+**Technical Skills:**
+
+- **Programming Languages:** Python (Proficient)
+- **Machine Learning and Artificial Intelligence:** Experience in building and deploying ML and AI models using PyTorch and TensorFlow
+- **Data Science:** Proficient in Pandas and Numpy for data manipulation and analysis
+
+I understand that the job description requires experience in JavaScript, React, Node.js, and database management. While my primary expertise lies in Python, I am excited about the opportunity to bridge the gap and expand my skill set to meet the demands of this role. I am confident that my passion for learning, combined with my strong technical foundation, makes me an excellent candidate for this position.
+
+I am particularly drawn to this role because of the opportunity to work on a wide range of technologies, from front-end and back-end development to machine learning and data analysis. My experience in building scalable and secure applications, coupled with my ability to work in a fast-paced environment, makes me an ideal fit for this position.
+
+Thank you for considering my application. I would be thrilled to discuss my qualifications further and learn more about your team's work.
+
+Please find attached my resume for your review. I look forward to the opportunity to discuss this position further.
+
+Best regards,
+
+Anuu
+Full Stack Developer
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langchain/errors/OUTPUT_PARSING_FAILURE 
+2026-06-13 13:03:48 | INFO     | perplexitiy.recruiter_agent | Generating email for query: 
+        you are an Professional Mail writer with over 10+ years of experience
+        you are mostly known as a person who sends mail to recruiter and get 100% success rate
+        Now Work Here:
+        Name - Kshitiz
+        Job description - Data Analyst
+
+Analyze data, create dashboards, generate insights, and support business decisions through reporting and visualization. Requires SQL, Excel, Power BI/Tableau, and strong analytical skills.
+        ----------------------------------
+        adjust mail according to the job description and my skills
+        My Skills-
+        Python
+        Machine Learning
+        Artificial Intelligence
+        Pytorch
+        TensorFlow
+        Pandas and Numpy
+        -----------------------------------
+        Make sure that use proper spacing and format 
+        
+2026-06-13 13:03:48 | INFO     | perplexitiy.recruiter_agent | Sending email to: anuragbusiness819@gmail.com
+2026-06-13 13:03:48 | INFO     | perplexitiy.recruiter_agent | Invoking LLM to generate email...
+2026-06-13 13:03:50 | ERROR    | perplexitiy.recruiter_agent | Email sending failed: Invalid json output: **Application for Data Analyst Position**
+
+Dear Hiring Manager,
+
+I am writing to express my strong interest in the Data Analyst position at your esteemed organization. As a seasoned professional with over 10+ years of experience in crafting compelling emails and achieving 100% success rate, I am confident in my ability to effectively communicate with recruiters and secure interviews.
+
+Below, I have highlighted my key skills and qualifications that align with the job description:
+
+**Job Description Alignment:**
+
+As a skilled Data Analyst, I possess the ability to analyze complex data sets, create informative dashboards, and generate actionable insights to support business decisions. My expertise in SQL, data visualization tools (Power BI/Tableau), and strong analytical skills make me an ideal candidate for this role.
+
+**Technical Skills:**
+
+* **Programming Languages:** Python (Proficient), Machine Learning, Artificial Intelligence
+* **Deep Learning Frameworks:** PyTorch, TensorFlow
+* **Data Analysis Libraries:** Pandas, Numpy
+* **Data Visualization Tools:** Power BI, Tableau
+
+**Additional Skills:**
+
+* Strong analytical and problem-solving skills
+* Excellent communication and presentation skills
+* Ability to work independently and collaboratively in a team environment
+* Proficient in SQL and data modeling techniques
+
+**Why I'm the Ideal Candidate:**
+
+With my extensive experience in data analysis, machine learning, and artificial intelligence, I am confident in my ability to make a significant impact in your organization. My proficiency in Python, PyTorch, and TensorFlow enables me to develop and implement complex data models, while my skills in Pandas and Numpy allow me to efficiently manipulate and analyze large datasets.
+
+I am excited about the opportunity to bring my skills and experience to your team and contribute to the success of your organization. Thank you for considering my application. I look forward to the opportunity to discuss my qualifications further.
+
+**Contact Information:**
+
+Kshitiz
+[Your Email Address]
+[Your Phone Number]
+[Your LinkedIn Profile]
+
+Please feel free to contact me to discuss this opportunity further.
+
+Best regards,
+
+Kshitiz
+Data Analyst
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langchain/errors/OUTPUT_PARSING_FAILURE 
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\Desktop\RAG_&_Automation_projects\Perplexitiy_mini\Perplexity\.venv\Lib\site-packages\langchain_core\output_parsers\json.py", line 88, in parse_result
+    return parse_json_markdown(text)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\RAG_&_Automation_projects\Perplexitiy_mini\Perplexity\.venv\Lib\site-packages\langchain_core\utils\json.py", line 163, in parse_json_markdown
+    return _parse_json(json_str, parser=parser)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\RAG_&_Automation_projects\Perplexitiy_mini\Perplexity\.venv\Lib\site-packages\langchain_core\utils\json.py", line 191, in _parse_json
+    return parser(json_str)
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\RAG_&_Automation_projects\Perplexitiy_mini\Perplexity\.venv\Lib\site-packages\langchain_core\utils\json.py", line 136, in parse_partial_json
+    return json.loads(s, strict=strict)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\json\__init__.py", line 359, in loads
+    return cls(**kw).decode(s)
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\Desktop\RAG_&_Automation_projects\Perplexitiy_mini\Perplexity\perplexitiy\recruiter_agent.py", line 65, in mail_sender
+    # Extract subject and body from the response text
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\RAG_&_Automation_projects\Perplexitiy_mini\Perplexity\.venv\Lib\site-packages\langchain_core\output_parsers\json.py", line 102, in parse
+    return self.parse_result([Generation(text=text)])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\RAG_&_Automation_projects\Perplexitiy_mini\Perplexity\.venv\Lib\site-packages\langchain_core\output_parsers\json.py", line 91, in parse_result
+    raise OutputParserException(msg, llm_output=text) from e
+langchain_core.exceptions.OutputParserException: Invalid json output: **Application for Data Analyst Position**
+
+Dear Hiring Manager,
+
+I am writing to express my strong interest in the Data Analyst position at your esteemed organization. As a seasoned professional with over 10+ years of experience in crafting compelling emails and achieving 100% success rate, I am confident in my ability to effectively communicate with recruiters and secure interviews.
+
+Below, I have highlighted my key skills and qualifications that align with the job description:
+
+**Job Description Alignment:**
+
+As a skilled Data Analyst, I possess the ability to analyze complex data sets, create informative dashboards, and generate actionable insights to support business decisions. My expertise in SQL, data visualization tools (Power BI/Tableau), and strong analytical skills make me an ideal candidate for this role.
+
+**Technical Skills:**
+
+* **Programming Languages:** Python (Proficient), Machine Learning, Artificial Intelligence
+* **Deep Learning Frameworks:** PyTorch, TensorFlow
+* **Data Analysis Libraries:** Pandas, Numpy
+* **Data Visualization Tools:** Power BI, Tableau
+
+**Additional Skills:**
+
+* Strong analytical and problem-solving skills
+* Excellent communication and presentation skills
+* Ability to work independently and collaboratively in a team environment
+* Proficient in SQL and data modeling techniques
+
+**Why I'm the Ideal Candidate:**
+
+With my extensive experience in data analysis, machine learning, and artificial intelligence, I am confident in my ability to make a significant impact in your organization. My proficiency in Python, PyTorch, and TensorFlow enables me to develop and implement complex data models, while my skills in Pandas and Numpy allow me to efficiently manipulate and analyze large datasets.
+
+I am excited about the opportunity to bring my skills and experience to your team and contribute to the success of your organization. Thank you for considering my application. I look forward to the opportunity to discuss my qualifications further.
+
+**Contact Information:**
+
+Kshitiz
+[Your Email Address]
+[Your Phone Number]
+[Your LinkedIn Profile]
+
+Please feel free to contact me to discuss this opportunity further.
+
+Best regards,
+
+Kshitiz
+Data Analyst
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langchain/errors/OUTPUT_PARSING_FAILURE 
+2026-06-13 13:03:50 | INFO     | perplexitiy.recruiter_agent | All mails send to the user
+2026-06-13 13:08:53 | INFO     | RAG.vector_store | Store initialized
+2026-06-13 13:08:58 | INFO     | RAG.embedding_manager | Model Loaded Successfully: BAAI/bge-small-en-v1.5
+2026-06-13 13:09:48 | INFO     | perplexitiy.recruiter_agent | Generating email for query: 
+        you are an Professional Mail writer with over 10+ years of experience
+        you are mostly known as a person who sends mail to recruiter and get 100% success rate
+        Now Work Here:
+        Name - Anurag
+        Job description - AI Engineer
+
+Build and deploy AI/ML solutions, develop LLM-powered applications, optimize models, and collaborate with cross-functional teams. Requires Python, machine learning, deep learning frameworks, and cloud platform experience.
+        ----------------------------------
+        adjust mail according to the job description and my skills
+        My Skills-
+        Python
+        Machine Learning
+        Artificial Intelligence
+        Pytorch
+        TensorFlow
+        Pandas and Numpy
+        -----------------------------------
+        Make sure that use proper spacing and format 
+        
+2026-06-13 13:09:48 | INFO     | perplexitiy.recruiter_agent | Sending email to: vanuragkumardesai@gmail.com
+2026-06-13 13:09:48 | INFO     | perplexitiy.recruiter_agent | Invoking LLM to generate email...
+2026-06-13 13:09:53 | ERROR    | perplexitiy.recruiter_agent | Email sending failed: Invalid json output: Here's a tailored cover letter based on the job description and your skills:
+
+**Anurag**
+**AI Engineer**
+
+**Subject: Application for AI/ML Solutions Engineer Position**
+
+Dear Hiring Manager,
+
+I am excited to apply for the AI/ML Solutions Engineer position at [Company Name], where I can leverage my expertise in building and deploying AI/ML solutions to drive innovation and success. With over 10+ years of experience in the field, I am confident in my ability to develop LLM-powered applications, optimize models, and collaborate with cross-functional teams.
+
+**Summary of Qualifications:**
+
+As a seasoned AI Engineer with a strong background in machine learning and deep learning, I possess the skills and expertise to excel in this role. Here are some highlights of my qualifications:
+
+* **Programming Skills:** Proficient in Python, the industry standard for AI/ML development.
+* **Machine Learning and Deep Learning Frameworks:** Experienced in using PyTorch and TensorFlow to build and deploy AI/ML models.
+* **Data Science Libraries:** Skilled in using Pandas and Numpy to manipulate and analyze large datasets.
+* **Cloud Platform Experience:** Familiar with deploying and managing AI/ML models on cloud platforms.
+
+**Why I'm the Best Fit:**
+
+With my extensive experience in building and deploying AI/ML solutions, I am well-equipped to collaborate with cross-functional teams to drive innovation and success. My expertise in optimizing models and developing LLM-powered applications will enable me to make a significant impact at [Company Name].
+
+**Why I'm Excited about this Role:**
+
+I am drawn to this role because of the opportunity to work on cutting-edge AI/ML projects and contribute to the development of innovative solutions. I am excited about the prospect of collaborating with a talented team of engineers and scientists to drive business growth and success.
+
+**Thank You:**
+
+Thank you for considering my application. I would welcome the opportunity to discuss my qualifications further and explore how I can contribute to the success of [Company Name].
+
+Sincerely,
+
+Anurag
+AI Engineer
+[Your Contact Information]
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langchain/errors/OUTPUT_PARSING_FAILURE 
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\Desktop\RAG_&_Automation_projects\Perplexitiy_mini\Perplexity\.venv\Lib\site-packages\langchain_core\output_parsers\json.py", line 88, in parse_result
+    return parse_json_markdown(text)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\RAG_&_Automation_projects\Perplexitiy_mini\Perplexity\.venv\Lib\site-packages\langchain_core\utils\json.py", line 163, in parse_json_markdown
+    return _parse_json(json_str, parser=parser)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\RAG_&_Automation_projects\Perplexitiy_mini\Perplexity\.venv\Lib\site-packages\langchain_core\utils\json.py", line 191, in _parse_json
+    return parser(json_str)
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\RAG_&_Automation_projects\Perplexitiy_mini\Perplexity\.venv\Lib\site-packages\langchain_core\utils\json.py", line 136, in parse_partial_json
+    return json.loads(s, strict=strict)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\json\__init__.py", line 359, in loads
+    return cls(**kw).decode(s)
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\Desktop\RAG_&_Automation_projects\Perplexitiy_mini\Perplexity\perplexitiy\recruiter_agent.py", line 65, in mail_sender
+    # Extract subject and body from the response text
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\RAG_&_Automation_projects\Perplexitiy_mini\Perplexity\.venv\Lib\site-packages\langchain_core\output_parsers\json.py", line 102, in parse
+    return self.parse_result([Generation(text=text)])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\RAG_&_Automation_projects\Perplexitiy_mini\Perplexity\.venv\Lib\site-packages\langchain_core\output_parsers\json.py", line 91, in parse_result
+    raise OutputParserException(msg, llm_output=text) from e
+langchain_core.exceptions.OutputParserException: Invalid json output: Here's a tailored cover letter based on the job description and your skills:
+
+**Anurag**
+**AI Engineer**
+
+**Subject: Application for AI/ML Solutions Engineer Position**
+
+Dear Hiring Manager,
+
+I am excited to apply for the AI/ML Solutions Engineer position at [Company Name], where I can leverage my expertise in building and deploying AI/ML solutions to drive innovation and success. With over 10+ years of experience in the field, I am confident in my ability to develop LLM-powered applications, optimize models, and collaborate with cross-functional teams.
+
+**Summary of Qualifications:**
+
+As a seasoned AI Engineer with a strong background in machine learning and deep learning, I possess the skills and expertise to excel in this role. Here are some highlights of my qualifications:
+
+* **Programming Skills:** Proficient in Python, the industry standard for AI/ML development.
+* **Machine Learning and Deep Learning Frameworks:** Experienced in using PyTorch and TensorFlow to build and deploy AI/ML models.
+* **Data Science Libraries:** Skilled in using Pandas and Numpy to manipulate and analyze large datasets.
+* **Cloud Platform Experience:** Familiar with deploying and managing AI/ML models on cloud platforms.
+
+**Why I'm the Best Fit:**
+
+With my extensive experience in building and deploying AI/ML solutions, I am well-equipped to collaborate with cross-functional teams to drive innovation and success. My expertise in optimizing models and developing LLM-powered applications will enable me to make a significant impact at [Company Name].
+
+**Why I'm Excited about this Role:**
+
+I am drawn to this role because of the opportunity to work on cutting-edge AI/ML projects and contribute to the development of innovative solutions. I am excited about the prospect of collaborating with a talented team of engineers and scientists to drive business growth and success.
+
+**Thank You:**
+
+Thank you for considering my application. I would welcome the opportunity to discuss my qualifications further and explore how I can contribute to the success of [Company Name].
+
+Sincerely,
+
+Anurag
+AI Engineer
+[Your Contact Information]
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langchain/errors/OUTPUT_PARSING_FAILURE 
+2026-06-13 13:09:53 | INFO     | perplexitiy.recruiter_agent | Generating email for query: 
+        you are an Professional Mail writer with over 10+ years of experience
+        you are mostly known as a person who sends mail to recruiter and get 100% success rate
+        Now Work Here:
+        Name - Anuu
+        Job description - Full Stack Developer
+
+Develop and maintain front-end and back-end applications, build APIs, manage databases, and ensure application performance and security. Requires JavaScript/TypeScript, React, Node.js, and database knowledge.
+        ----------------------------------
+        adjust mail according to the job description and my skills
+        My Skills-
+        Python
+        Machine Learning
+        Artificial Intelligence
+        Pytorch
+        TensorFlow
+        Pandas and Numpy
+        -----------------------------------
+        Make sure that use proper spacing and format 
+        
+2026-06-13 13:09:53 | INFO     | perplexitiy.recruiter_agent | Sending email to: gameranurag24@gmail.com
+2026-06-13 13:09:53 | INFO     | perplexitiy.recruiter_agent | Invoking LLM to generate email...
+2026-06-13 13:09:55 | ERROR    | perplexitiy.recruiter_agent | Email sending failed: Invalid json output: Here's a professionally written email tailored to the job description and your skills:
+
+
+Subject: Application for Full Stack Developer Position
+
+Dear [Hiring Manager's Name],
+
+I am writing to express my interest in the Full Stack Developer position at [Company Name]. With over 10+ years of experience in developing and maintaining front-end and back-end applications, I am confident that I can make a valuable contribution to your team.
+
+About My Background:
+
+As a seasoned professional with a passion for building scalable and efficient applications, I possess a unique blend of technical expertise and problem-solving skills. My extensive experience has equipped me with a deep understanding of the entire development lifecycle, from designing and implementing APIs to managing databases and ensuring application performance and security.
+
+My Technical Skills:
+
+- **Programming Languages:** Proficient in Python, with expertise in developing scalable and high-performance applications.
+- **Machine Learning and Artificial Intelligence:** Skilled in leveraging Machine Learning and Artificial Intelligence techniques to drive business growth and improve application functionality.
+- **Deep Learning Frameworks:** Well-versed in PyTorch and TensorFlow, with hands-on experience in building and deploying complex neural networks.
+- **Data Science Libraries:** Experienced in using Pandas and Numpy to analyze and manipulate large datasets.
+
+Key Strengths:
+
+- **Front-end Development:** Proficient in building responsive and user-friendly interfaces using [assumed skills, please replace with actual skills if any].
+- **Back-end Development:** Experienced in designing and implementing robust APIs, database management, and ensuring application security.
+- **System Integration:** Skilled in integrating multiple systems and services to create seamless and efficient workflows.
+
+Why I'm a Great Fit:
+
+- **Strong Technical Foundation:** My extensive experience and expertise in various programming languages, frameworks, and technologies make me a valuable asset to your team.
+- **Proven Track Record:** With a 100% success rate in my previous endeavors, I am confident in my ability to drive results and deliver high-quality solutions.
+- **Strong Communication Skills:** I possess excellent communication skills, enabling me to effectively collaborate with cross-functional teams and stakeholders.
+
+I would welcome the opportunity to discuss my application and how I can contribute to [Company Name]'s success. Please feel free to contact me at [Your Email Address] or [Your Phone Number].
+
+Thank you for considering my application.
+
+Best regards,
+
+Anuu
+Full Stack Developer
+[Your LinkedIn Profile (if applicable)]
+[Your Personal Website (if applicable)]
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langchain/errors/OUTPUT_PARSING_FAILURE 
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\Desktop\RAG_&_Automation_projects\Perplexitiy_mini\Perplexity\.venv\Lib\site-packages\langchain_core\output_parsers\json.py", line 88, in parse_result
+    return parse_json_markdown(text)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\RAG_&_Automation_projects\Perplexitiy_mini\Perplexity\.venv\Lib\site-packages\langchain_core\utils\json.py", line 163, in parse_json_markdown
+    return _parse_json(json_str, parser=parser)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\RAG_&_Automation_projects\Perplexitiy_mini\Perplexity\.venv\Lib\site-packages\langchain_core\utils\json.py", line 191, in _parse_json
+    return parser(json_str)
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\RAG_&_Automation_projects\Perplexitiy_mini\Perplexity\.venv\Lib\site-packages\langchain_core\utils\json.py", line 136, in parse_partial_json
+    return json.loads(s, strict=strict)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\json\__init__.py", line 359, in loads
+    return cls(**kw).decode(s)
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\Desktop\RAG_&_Automation_projects\Perplexitiy_mini\Perplexity\perplexitiy\recruiter_agent.py", line 65, in mail_sender
+    # Extract subject and body from the response text
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\RAG_&_Automation_projects\Perplexitiy_mini\Perplexity\.venv\Lib\site-packages\langchain_core\output_parsers\json.py", line 102, in parse
+    return self.parse_result([Generation(text=text)])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\RAG_&_Automation_projects\Perplexitiy_mini\Perplexity\.venv\Lib\site-packages\langchain_core\output_parsers\json.py", line 91, in parse_result
+    raise OutputParserException(msg, llm_output=text) from e
+langchain_core.exceptions.OutputParserException: Invalid json output: Here's a professionally written email tailored to the job description and your skills:
+
+
+Subject: Application for Full Stack Developer Position
+
+Dear [Hiring Manager's Name],
+
+I am writing to express my interest in the Full Stack Developer position at [Company Name]. With over 10+ years of experience in developing and maintaining front-end and back-end applications, I am confident that I can make a valuable contribution to your team.
+
+About My Background:
+
+As a seasoned professional with a passion for building scalable and efficient applications, I possess a unique blend of technical expertise and problem-solving skills. My extensive experience has equipped me with a deep understanding of the entire development lifecycle, from designing and implementing APIs to managing databases and ensuring application performance and security.
+
+My Technical Skills:
+
+- **Programming Languages:** Proficient in Python, with expertise in developing scalable and high-performance applications.
+- **Machine Learning and Artificial Intelligence:** Skilled in leveraging Machine Learning and Artificial Intelligence techniques to drive business growth and improve application functionality.
+- **Deep Learning Frameworks:** Well-versed in PyTorch and TensorFlow, with hands-on experience in building and deploying complex neural networks.
+- **Data Science Libraries:** Experienced in using Pandas and Numpy to analyze and manipulate large datasets.
+
+Key Strengths:
+
+- **Front-end Development:** Proficient in building responsive and user-friendly interfaces using [assumed skills, please replace with actual skills if any].
+- **Back-end Development:** Experienced in designing and implementing robust APIs, database management, and ensuring application security.
+- **System Integration:** Skilled in integrating multiple systems and services to create seamless and efficient workflows.
+
+Why I'm a Great Fit:
+
+- **Strong Technical Foundation:** My extensive experience and expertise in various programming languages, frameworks, and technologies make me a valuable asset to your team.
+- **Proven Track Record:** With a 100% success rate in my previous endeavors, I am confident in my ability to drive results and deliver high-quality solutions.
+- **Strong Communication Skills:** I possess excellent communication skills, enabling me to effectively collaborate with cross-functional teams and stakeholders.
+
+I would welcome the opportunity to discuss my application and how I can contribute to [Company Name]'s success. Please feel free to contact me at [Your Email Address] or [Your Phone Number].
+
+Thank you for considering my application.
+
+Best regards,
+
+Anuu
+Full Stack Developer
+[Your LinkedIn Profile (if applicable)]
+[Your Personal Website (if applicable)]
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langchain/errors/OUTPUT_PARSING_FAILURE 
+2026-06-13 13:09:55 | INFO     | perplexitiy.recruiter_agent | Generating email for query: 
+        you are an Professional Mail writer with over 10+ years of experience
+        you are mostly known as a person who sends mail to recruiter and get 100% success rate
+        Now Work Here:
+        Name - Kshitiz
+        Job description - Data Analyst
+
+Analyze data, create dashboards, generate insights, and support business decisions through reporting and visualization. Requires SQL, Excel, Power BI/Tableau, and strong analytical skills.
+        ----------------------------------
+        adjust mail according to the job description and my skills
+        My Skills-
+        Python
+        Machine Learning
+        Artificial Intelligence
+        Pytorch
+        TensorFlow
+        Pandas and Numpy
+        -----------------------------------
+        Make sure that use proper spacing and format 
+        
+2026-06-13 13:09:55 | INFO     | perplexitiy.recruiter_agent | Sending email to: anuragbusiness819@gmail.com
+2026-06-13 13:09:55 | INFO     | perplexitiy.recruiter_agent | Invoking LLM to generate email...
+2026-06-13 13:09:58 | ERROR    | perplexitiy.recruiter_agent | Email sending failed: Invalid json output: Subject: Application for Data Analyst Position
+
+Dear Hiring Manager,
+
+I am writing to express my enthusiastic interest in the Data Analyst position at [Company Name]. As a highly skilled and experienced data professional with a strong background in data analysis, machine learning, and artificial intelligence, I am confident that I would be an excellent fit for this role.
+
+With over 10 years of experience in the data industry, I have developed a unique blend of technical and business acumen that enables me to provide actionable insights and drive business growth. My expertise in Python, machine learning, and artificial intelligence has equipped me with the skills to analyze complex data sets, identify patterns, and make informed decisions.
+
+Here are some key highlights of my skills and experience that align with the job description:
+
+- **Data Analysis**: I have extensive experience in analyzing large data sets using Python and its libraries such as Pandas and NumPy. I am well-versed in data cleaning, data transformation, and data visualization techniques.
+- **Machine Learning**: I have a strong background in machine learning and have experience working with popular libraries such as PyTorch and TensorFlow. I have applied machine learning algorithms to real-world problems and delivered results-driven solutions.
+- **Artificial Intelligence**: I have hands-on experience with artificial intelligence and have worked on projects that involve natural language processing, computer vision, and predictive modeling.
+- **Data Visualization**: I am proficient in creating interactive and informative dashboards using Power BI and Tableau. I have experience in data visualization and have created reports that have helped businesses make data-driven decisions.
+- **SQL**: I have experience working with SQL and have used it to extract data from databases and perform data analysis.
+
+In addition to my technical skills, I possess excellent communication and problem-solving skills, which enable me to effectively communicate complex data insights to non-technical stakeholders. I am a collaborative team player who is passionate about working with cross-functional teams to drive business outcomes.
+
+Thank you for considering my application. I would welcome the opportunity to discuss my qualifications further and explore how I can contribute to the success of [Company Name]. Please do not hesitate to contact me at [Your Contact Information].
+
+Sincerely,
+
+Kshitiz
+Data Analyst
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langchain/errors/OUTPUT_PARSING_FAILURE 
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\Desktop\RAG_&_Automation_projects\Perplexitiy_mini\Perplexity\.venv\Lib\site-packages\langchain_core\output_parsers\json.py", line 88, in parse_result
+    return parse_json_markdown(text)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\RAG_&_Automation_projects\Perplexitiy_mini\Perplexity\.venv\Lib\site-packages\langchain_core\utils\json.py", line 163, in parse_json_markdown
+    return _parse_json(json_str, parser=parser)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\RAG_&_Automation_projects\Perplexitiy_mini\Perplexity\.venv\Lib\site-packages\langchain_core\utils\json.py", line 191, in _parse_json
+    return parser(json_str)
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\RAG_&_Automation_projects\Perplexitiy_mini\Perplexity\.venv\Lib\site-packages\langchain_core\utils\json.py", line 136, in parse_partial_json
+    return json.loads(s, strict=strict)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\json\__init__.py", line 359, in loads
+    return cls(**kw).decode(s)
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\Desktop\RAG_&_Automation_projects\Perplexitiy_mini\Perplexity\perplexitiy\recruiter_agent.py", line 65, in mail_sender
+    # Extract subject and body from the response text
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\RAG_&_Automation_projects\Perplexitiy_mini\Perplexity\.venv\Lib\site-packages\langchain_core\output_parsers\json.py", line 102, in parse
+    return self.parse_result([Generation(text=text)])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\RAG_&_Automation_projects\Perplexitiy_mini\Perplexity\.venv\Lib\site-packages\langchain_core\output_parsers\json.py", line 91, in parse_result
+    raise OutputParserException(msg, llm_output=text) from e
+langchain_core.exceptions.OutputParserException: Invalid json output: Subject: Application for Data Analyst Position
+
+Dear Hiring Manager,
+
+I am writing to express my enthusiastic interest in the Data Analyst position at [Company Name]. As a highly skilled and experienced data professional with a strong background in data analysis, machine learning, and artificial intelligence, I am confident that I would be an excellent fit for this role.
+
+With over 10 years of experience in the data industry, I have developed a unique blend of technical and business acumen that enables me to provide actionable insights and drive business growth. My expertise in Python, machine learning, and artificial intelligence has equipped me with the skills to analyze complex data sets, identify patterns, and make informed decisions.
+
+Here are some key highlights of my skills and experience that align with the job description:
+
+- **Data Analysis**: I have extensive experience in analyzing large data sets using Python and its libraries such as Pandas and NumPy. I am well-versed in data cleaning, data transformation, and data visualization techniques.
+- **Machine Learning**: I have a strong background in machine learning and have experience working with popular libraries such as PyTorch and TensorFlow. I have applied machine learning algorithms to real-world problems and delivered results-driven solutions.
+- **Artificial Intelligence**: I have hands-on experience with artificial intelligence and have worked on projects that involve natural language processing, computer vision, and predictive modeling.
+- **Data Visualization**: I am proficient in creating interactive and informative dashboards using Power BI and Tableau. I have experience in data visualization and have created reports that have helped businesses make data-driven decisions.
+- **SQL**: I have experience working with SQL and have used it to extract data from databases and perform data analysis.
+
+In addition to my technical skills, I possess excellent communication and problem-solving skills, which enable me to effectively communicate complex data insights to non-technical stakeholders. I am a collaborative team player who is passionate about working with cross-functional teams to drive business outcomes.
+
+Thank you for considering my application. I would welcome the opportunity to discuss my qualifications further and explore how I can contribute to the success of [Company Name]. Please do not hesitate to contact me at [Your Contact Information].
+
+Sincerely,
+
+Kshitiz
+Data Analyst
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langchain/errors/OUTPUT_PARSING_FAILURE 
+2026-06-13 13:09:58 | INFO     | perplexitiy.recruiter_agent | All mails send to the user
+2026-06-13 13:12:45 | INFO     | RAG.vector_store | Store initialized
+2026-06-13 13:12:54 | INFO     | RAG.embedding_manager | Model Loaded Successfully: BAAI/bge-small-en-v1.5
+2026-06-13 13:13:11 | INFO     | perplexitiy.recruiter_agent | Generating email for query: 
+        you are an Professional Mail writer with over 10+ years of experience
+        you are mostly known as a person who sends mail to recruiter and get 100% success rate
+        Now Work Here:
+        Name - Anurag
+        Job description - AI Engineer
+
+Build and deploy AI/ML solutions, develop LLM-powered applications, optimize models, and collaborate with cross-functional teams. Requires Python, machine learning, deep learning frameworks, and cloud platform experience.
+        ----------------------------------
+        adjust mail according to the job description and my skills
+        My Skills-
+        Python
+        Machine Learning
+        Artificial Intelligence
+        Pytorch
+        TensorFlow
+        Pandas and Numpy
+        -----------------------------------
+        Make sure that use proper spacing and format 
+        
+2026-06-13 13:13:11 | INFO     | perplexitiy.recruiter_agent | Sending email to: vanuragkumardesai@gmail.com
+2026-06-13 13:13:11 | INFO     | perplexitiy.recruiter_agent | Invoking LLM to generate email...
+2026-06-13 13:13:12 | ERROR    | perplexitiy.recruiter_agent | Email sending failed: Invalid json output: **Subject: Application for AI Engineer Position**
+
+Dear [Hiring Manager's Name],
+
+I am writing to express my interest in the AI Engineer position at [Company Name]. With over 10+ years of experience in building and deploying AI/ML solutions, I am confident that my expertise aligns perfectly with the job requirements.
+
+**About Me:**
+
+As a seasoned AI professional, I possess a unique combination of technical skills and industry experience. My areas of expertise include:
+
+* **Programming Languages:** Python, which I have mastered over the years and have successfully applied in various projects.
+* **Machine Learning (ML) and Artificial Intelligence (AI):** I have in-depth knowledge of ML and AI concepts, including supervised and unsupervised learning, neural networks, and deep learning techniques.
+* **Deep Learning Frameworks:** I am well-versed in PyTorch and TensorFlow, having worked on numerous projects that leverage these frameworks to build and optimize LLM-powered applications.
+* **Data Science Libraries:** I am proficient in Pandas and Numpy, which enable me to efficiently manipulate and analyze large datasets.
+
+**Key Strengths:**
+
+* **Build and Deploy AI/ML Solutions:** I have a proven track record of designing, developing, and deploying AI/ML solutions that drive business value and improve operational efficiency.
+* **LLM-Powered Applications:** I have hands-on experience in building applications that leverage Large Language Models (LLMs) to provide intelligent and contextual responses to user queries.
+* **Model Optimization:** I am skilled in optimizing models to improve their performance, reduce latency, and enhance overall user experience.
+* **Collaboration:** I have a strong ability to work collaboratively with cross-functional teams, including data scientists, engineers, and product managers, to drive project success.
+
+**Why I'm a Great Fit:**
+
+With my extensive experience in AI/ML engineering, I am confident that I can make a significant contribution to [Company Name]. My technical skills, industry knowledge, and passion for innovation make me an ideal candidate for this role. I am excited about the prospect of joining a team that shares my enthusiasm for AI and ML and is committed to pushing the boundaries of what is possible.
+
+**Next Steps:**
+
+I would be thrilled to discuss my application and how I can contribute to [Company Name]'s success. Please feel free to contact me at [Your Email Address] or [Your Phone Number]. I have attached my resume for your review.
+
+Thank you for your time and consideration. I look forward to the opportunity to discuss this further.
+
+**Best regards,**
+
+Anurag
+AI Engineer
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langchain/errors/OUTPUT_PARSING_FAILURE 
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\Desktop\RAG_&_Automation_projects\Perplexitiy_mini\Perplexity\.venv\Lib\site-packages\langchain_core\output_parsers\json.py", line 88, in parse_result
+    return parse_json_markdown(text)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\RAG_&_Automation_projects\Perplexitiy_mini\Perplexity\.venv\Lib\site-packages\langchain_core\utils\json.py", line 163, in parse_json_markdown
+    return _parse_json(json_str, parser=parser)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\RAG_&_Automation_projects\Perplexitiy_mini\Perplexity\.venv\Lib\site-packages\langchain_core\utils\json.py", line 191, in _parse_json
+    return parser(json_str)
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\RAG_&_Automation_projects\Perplexitiy_mini\Perplexity\.venv\Lib\site-packages\langchain_core\utils\json.py", line 136, in parse_partial_json
+    return json.loads(s, strict=strict)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\json\__init__.py", line 359, in loads
+    return cls(**kw).decode(s)
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\Desktop\RAG_&_Automation_projects\Perplexitiy_mini\Perplexity\perplexitiy\recruiter_agent.py", line 65, in mail_sender
+    )
+      
+  File "C:\Users\Lenovo\Desktop\RAG_&_Automation_projects\Perplexitiy_mini\Perplexity\.venv\Lib\site-packages\langchain_core\output_parsers\json.py", line 102, in parse
+    return self.parse_result([Generation(text=text)])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\RAG_&_Automation_projects\Perplexitiy_mini\Perplexity\.venv\Lib\site-packages\langchain_core\output_parsers\json.py", line 91, in parse_result
+    raise OutputParserException(msg, llm_output=text) from e
+langchain_core.exceptions.OutputParserException: Invalid json output: **Subject: Application for AI Engineer Position**
+
+Dear [Hiring Manager's Name],
+
+I am writing to express my interest in the AI Engineer position at [Company Name]. With over 10+ years of experience in building and deploying AI/ML solutions, I am confident that my expertise aligns perfectly with the job requirements.
+
+**About Me:**
+
+As a seasoned AI professional, I possess a unique combination of technical skills and industry experience. My areas of expertise include:
+
+* **Programming Languages:** Python, which I have mastered over the years and have successfully applied in various projects.
+* **Machine Learning (ML) and Artificial Intelligence (AI):** I have in-depth knowledge of ML and AI concepts, including supervised and unsupervised learning, neural networks, and deep learning techniques.
+* **Deep Learning Frameworks:** I am well-versed in PyTorch and TensorFlow, having worked on numerous projects that leverage these frameworks to build and optimize LLM-powered applications.
+* **Data Science Libraries:** I am proficient in Pandas and Numpy, which enable me to efficiently manipulate and analyze large datasets.
+
+**Key Strengths:**
+
+* **Build and Deploy AI/ML Solutions:** I have a proven track record of designing, developing, and deploying AI/ML solutions that drive business value and improve operational efficiency.
+* **LLM-Powered Applications:** I have hands-on experience in building applications that leverage Large Language Models (LLMs) to provide intelligent and contextual responses to user queries.
+* **Model Optimization:** I am skilled in optimizing models to improve their performance, reduce latency, and enhance overall user experience.
+* **Collaboration:** I have a strong ability to work collaboratively with cross-functional teams, including data scientists, engineers, and product managers, to drive project success.
+
+**Why I'm a Great Fit:**
+
+With my extensive experience in AI/ML engineering, I am confident that I can make a significant contribution to [Company Name]. My technical skills, industry knowledge, and passion for innovation make me an ideal candidate for this role. I am excited about the prospect of joining a team that shares my enthusiasm for AI and ML and is committed to pushing the boundaries of what is possible.
+
+**Next Steps:**
+
+I would be thrilled to discuss my application and how I can contribute to [Company Name]'s success. Please feel free to contact me at [Your Email Address] or [Your Phone Number]. I have attached my resume for your review.
+
+Thank you for your time and consideration. I look forward to the opportunity to discuss this further.
+
+**Best regards,**
+
+Anurag
+AI Engineer
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langchain/errors/OUTPUT_PARSING_FAILURE 
+2026-06-13 13:13:12 | INFO     | perplexitiy.recruiter_agent | Generating email for query: 
+        you are an Professional Mail writer with over 10+ years of experience
+        you are mostly known as a person who sends mail to recruiter and get 100% success rate
+        Now Work Here:
+        Name - Anuu
+        Job description - Full Stack Developer
+
+Develop and maintain front-end and back-end applications, build APIs, manage databases, and ensure application performance and security. Requires JavaScript/TypeScript, React, Node.js, and database knowledge.
+        ----------------------------------
+        adjust mail according to the job description and my skills
+        My Skills-
+        Python
+        Machine Learning
+        Artificial Intelligence
+        Pytorch
+        TensorFlow
+        Pandas and Numpy
+        -----------------------------------
+        Make sure that use proper spacing and format 
+        
+2026-06-13 13:13:12 | INFO     | perplexitiy.recruiter_agent | Sending email to: gameranurag24@gmail.com
+2026-06-13 13:13:12 | INFO     | perplexitiy.recruiter_agent | Invoking LLM to generate email...
+2026-06-13 13:13:13 | ERROR    | perplexitiy.recruiter_agent | Email sending failed: Invalid json output: Here's an example of a mail that highlights your skills and experiences, tailored to the job description of a Full Stack Developer:
+
+Subject: Application for Full Stack Developer Position
+
+Dear Hiring Manager,
+
+I am writing to express my interest in the Full Stack Developer position at your esteemed organization. As a seasoned professional with over 10+ years of experience in crafting compelling mail pieces that yield a 100% success rate, I am confident in my ability to excel in this role.
+
+After reviewing the job description, I am excited to note that my skills align perfectly with the requirements. As a proficient developer, I possess a strong foundation in JavaScript/TypeScript and have experience with Node.js. Additionally, I have a deep understanding of database management and have successfully built and maintained front-end and back-end applications.
+
+However, I must clarify that my primary expertise lies in Python, Machine Learning, Artificial Intelligence, PyTorch, TensorFlow, Pandas, and Numpy. I believe that my unique blend of skills can bring a fresh perspective to your team, and I am eager to explore how my abilities can contribute to your organization's success.
+
+Some of my key strengths include:
+
+- **Front-end Development**: Proficient in crafting engaging user interfaces and user experiences using JavaScript/TypeScript and React.
+- **Back-end Development**: Experienced in building robust APIs using Node.js and managing databases with ease.
+- **Machine Learning and AI**: Skilled in designing and implementing machine learning models using PyTorch and TensorFlow.
+- **Data Analysis**: Proficient in working with large datasets using Pandas and Numpy.
+
+I would be thrilled to discuss my application and how my skills can benefit your organization. Please find attached my resume for your review.
+
+Thank you for considering my application. I look forward to the opportunity to discuss this further.
+
+Best regards,
+
+Anuu
+Full Stack Developer & Professional Mail Writer
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langchain/errors/OUTPUT_PARSING_FAILURE 
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\Desktop\RAG_&_Automation_projects\Perplexitiy_mini\Perplexity\.venv\Lib\site-packages\langchain_core\output_parsers\json.py", line 88, in parse_result
+    return parse_json_markdown(text)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\RAG_&_Automation_projects\Perplexitiy_mini\Perplexity\.venv\Lib\site-packages\langchain_core\utils\json.py", line 163, in parse_json_markdown
+    return _parse_json(json_str, parser=parser)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\RAG_&_Automation_projects\Perplexitiy_mini\Perplexity\.venv\Lib\site-packages\langchain_core\utils\json.py", line 191, in _parse_json
+    return parser(json_str)
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\RAG_&_Automation_projects\Perplexitiy_mini\Perplexity\.venv\Lib\site-packages\langchain_core\utils\json.py", line 136, in parse_partial_json
+    return json.loads(s, strict=strict)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\json\__init__.py", line 359, in loads
+    return cls(**kw).decode(s)
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\Desktop\RAG_&_Automation_projects\Perplexitiy_mini\Perplexity\perplexitiy\recruiter_agent.py", line 65, in mail_sender
+    )
+      
+  File "C:\Users\Lenovo\Desktop\RAG_&_Automation_projects\Perplexitiy_mini\Perplexity\.venv\Lib\site-packages\langchain_core\output_parsers\json.py", line 102, in parse
+    return self.parse_result([Generation(text=text)])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\RAG_&_Automation_projects\Perplexitiy_mini\Perplexity\.venv\Lib\site-packages\langchain_core\output_parsers\json.py", line 91, in parse_result
+    raise OutputParserException(msg, llm_output=text) from e
+langchain_core.exceptions.OutputParserException: Invalid json output: Here's an example of a mail that highlights your skills and experiences, tailored to the job description of a Full Stack Developer:
+
+Subject: Application for Full Stack Developer Position
+
+Dear Hiring Manager,
+
+I am writing to express my interest in the Full Stack Developer position at your esteemed organization. As a seasoned professional with over 10+ years of experience in crafting compelling mail pieces that yield a 100% success rate, I am confident in my ability to excel in this role.
+
+After reviewing the job description, I am excited to note that my skills align perfectly with the requirements. As a proficient developer, I possess a strong foundation in JavaScript/TypeScript and have experience with Node.js. Additionally, I have a deep understanding of database management and have successfully built and maintained front-end and back-end applications.
+
+However, I must clarify that my primary expertise lies in Python, Machine Learning, Artificial Intelligence, PyTorch, TensorFlow, Pandas, and Numpy. I believe that my unique blend of skills can bring a fresh perspective to your team, and I am eager to explore how my abilities can contribute to your organization's success.
+
+Some of my key strengths include:
+
+- **Front-end Development**: Proficient in crafting engaging user interfaces and user experiences using JavaScript/TypeScript and React.
+- **Back-end Development**: Experienced in building robust APIs using Node.js and managing databases with ease.
+- **Machine Learning and AI**: Skilled in designing and implementing machine learning models using PyTorch and TensorFlow.
+- **Data Analysis**: Proficient in working with large datasets using Pandas and Numpy.
+
+I would be thrilled to discuss my application and how my skills can benefit your organization. Please find attached my resume for your review.
+
+Thank you for considering my application. I look forward to the opportunity to discuss this further.
+
+Best regards,
+
+Anuu
+Full Stack Developer & Professional Mail Writer
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langchain/errors/OUTPUT_PARSING_FAILURE 
+2026-06-13 13:13:13 | INFO     | perplexitiy.recruiter_agent | Generating email for query: 
+        you are an Professional Mail writer with over 10+ years of experience
+        you are mostly known as a person who sends mail to recruiter and get 100% success rate
+        Now Work Here:
+        Name - Kshitiz
+        Job description - Data Analyst
+
+Analyze data, create dashboards, generate insights, and support business decisions through reporting and visualization. Requires SQL, Excel, Power BI/Tableau, and strong analytical skills.
+        ----------------------------------
+        adjust mail according to the job description and my skills
+        My Skills-
+        Python
+        Machine Learning
+        Artificial Intelligence
+        Pytorch
+        TensorFlow
+        Pandas and Numpy
+        -----------------------------------
+        Make sure that use proper spacing and format 
+        
+2026-06-13 13:13:13 | INFO     | perplexitiy.recruiter_agent | Sending email to: anuragbusiness819@gmail.com
+2026-06-13 13:13:13 | INFO     | perplexitiy.recruiter_agent | Invoking LLM to generate email...
+2026-06-13 13:13:14 | ERROR    | perplexitiy.recruiter_agent | Email sending failed: Invalid json output: **Subject: Application for Data Analyst Position - Bringing AI-Driven Insights to Drive Business Growth**
+
+Dear [Hiring Manager's Name],
+
+I am writing to express my strong interest in the Data Analyst position at [Company Name]. With over 10+ years of experience in crafting compelling narratives through data-driven insights, I am confident that my skills and expertise align perfectly with the requirements of this role.
+
+As a seasoned data analyst with a passion for leveraging technology to drive business growth, I possess a unique combination of skills that will enable me to make a significant impact at [Company Name]. My expertise in Python, Machine Learning, Artificial Intelligence, PyTorch, and TensorFlow allows me to extract valuable insights from complex data sets and present them in a clear, actionable manner.
+
+**Key Skills:**
+
+- **Programming Languages:** Proficient in Python, with expertise in leveraging libraries such as Pandas and Numpy for data manipulation and analysis.
+- **Machine Learning:** Skilled in building and deploying machine learning models using PyTorch and TensorFlow, with a focus on predictive analytics and pattern recognition.
+- **Artificial Intelligence:** Experienced in applying AI techniques to automate data analysis, identify trends, and optimize business processes.
+- **Data Visualization:** Proficient in creating interactive dashboards using Power BI/Tableau to communicate complex insights to non-technical stakeholders.
+
+**Data Analysis Expertise:**
+
+- **SQL:** Proficient in writing complex SQL queries to extract and manipulate data from various databases.
+- **Excel:** Skilled in using Excel to perform data analysis, create reports, and visualize data.
+- **Power BI/Tableau:** Experienced in creating interactive dashboards to communicate insights to non-technical stakeholders.
+
+**Why I'm the Perfect Fit:**
+
+- I have a proven track record of crafting compelling narratives through data-driven insights, with a 100% success rate in securing responses from recruiters.
+- My expertise in AI and Machine Learning enables me to stay ahead of the curve and identify emerging trends and opportunities.
+- I am passionate about leveraging technology to drive business growth and improve decision-making.
+
+**What I Bring to the Table:**
+
+- A unique combination of technical skills and business acumen, allowing me to communicate complex insights to both technical and non-technical stakeholders.
+- A proven track record of delivering high-quality results under tight deadlines.
+- A passion for innovation and a willingness to experiment with new technologies and techniques.
+
+Thank you for considering my application. I would welcome the opportunity to discuss my qualifications further and explore how I can contribute to the success of [Company Name]. Please feel free to contact me at [Your Email Address] or [Your Phone Number].
+
+Sincerely,
+
+Kshitiz
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langchain/errors/OUTPUT_PARSING_FAILURE 
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\Desktop\RAG_&_Automation_projects\Perplexitiy_mini\Perplexity\.venv\Lib\site-packages\langchain_core\output_parsers\json.py", line 88, in parse_result
+    return parse_json_markdown(text)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\RAG_&_Automation_projects\Perplexitiy_mini\Perplexity\.venv\Lib\site-packages\langchain_core\utils\json.py", line 163, in parse_json_markdown
+    return _parse_json(json_str, parser=parser)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\RAG_&_Automation_projects\Perplexitiy_mini\Perplexity\.venv\Lib\site-packages\langchain_core\utils\json.py", line 191, in _parse_json
+    return parser(json_str)
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\RAG_&_Automation_projects\Perplexitiy_mini\Perplexity\.venv\Lib\site-packages\langchain_core\utils\json.py", line 136, in parse_partial_json
+    return json.loads(s, strict=strict)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\json\__init__.py", line 359, in loads
+    return cls(**kw).decode(s)
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\Desktop\RAG_&_Automation_projects\Perplexitiy_mini\Perplexity\perplexitiy\recruiter_agent.py", line 65, in mail_sender
+    )
+      
+  File "C:\Users\Lenovo\Desktop\RAG_&_Automation_projects\Perplexitiy_mini\Perplexity\.venv\Lib\site-packages\langchain_core\output_parsers\json.py", line 102, in parse
+    return self.parse_result([Generation(text=text)])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\RAG_&_Automation_projects\Perplexitiy_mini\Perplexity\.venv\Lib\site-packages\langchain_core\output_parsers\json.py", line 91, in parse_result
+    raise OutputParserException(msg, llm_output=text) from e
+langchain_core.exceptions.OutputParserException: Invalid json output: **Subject: Application for Data Analyst Position - Bringing AI-Driven Insights to Drive Business Growth**
+
+Dear [Hiring Manager's Name],
+
+I am writing to express my strong interest in the Data Analyst position at [Company Name]. With over 10+ years of experience in crafting compelling narratives through data-driven insights, I am confident that my skills and expertise align perfectly with the requirements of this role.
+
+As a seasoned data analyst with a passion for leveraging technology to drive business growth, I possess a unique combination of skills that will enable me to make a significant impact at [Company Name]. My expertise in Python, Machine Learning, Artificial Intelligence, PyTorch, and TensorFlow allows me to extract valuable insights from complex data sets and present them in a clear, actionable manner.
+
+**Key Skills:**
+
+- **Programming Languages:** Proficient in Python, with expertise in leveraging libraries such as Pandas and Numpy for data manipulation and analysis.
+- **Machine Learning:** Skilled in building and deploying machine learning models using PyTorch and TensorFlow, with a focus on predictive analytics and pattern recognition.
+- **Artificial Intelligence:** Experienced in applying AI techniques to automate data analysis, identify trends, and optimize business processes.
+- **Data Visualization:** Proficient in creating interactive dashboards using Power BI/Tableau to communicate complex insights to non-technical stakeholders.
+
+**Data Analysis Expertise:**
+
+- **SQL:** Proficient in writing complex SQL queries to extract and manipulate data from various databases.
+- **Excel:** Skilled in using Excel to perform data analysis, create reports, and visualize data.
+- **Power BI/Tableau:** Experienced in creating interactive dashboards to communicate insights to non-technical stakeholders.
+
+**Why I'm the Perfect Fit:**
+
+- I have a proven track record of crafting compelling narratives through data-driven insights, with a 100% success rate in securing responses from recruiters.
+- My expertise in AI and Machine Learning enables me to stay ahead of the curve and identify emerging trends and opportunities.
+- I am passionate about leveraging technology to drive business growth and improve decision-making.
+
+**What I Bring to the Table:**
+
+- A unique combination of technical skills and business acumen, allowing me to communicate complex insights to both technical and non-technical stakeholders.
+- A proven track record of delivering high-quality results under tight deadlines.
+- A passion for innovation and a willingness to experiment with new technologies and techniques.
+
+Thank you for considering my application. I would welcome the opportunity to discuss my qualifications further and explore how I can contribute to the success of [Company Name]. Please feel free to contact me at [Your Email Address] or [Your Phone Number].
+
+Sincerely,
+
+Kshitiz
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langchain/errors/OUTPUT_PARSING_FAILURE 
+2026-06-13 13:13:14 | INFO     | perplexitiy.recruiter_agent | All mails send to the user
+2026-06-13 13:13:37 | INFO     | RAG.vector_store | Store initialized
+2026-06-13 13:13:43 | INFO     | RAG.embedding_manager | Model Loaded Successfully: BAAI/bge-small-en-v1.5
+2026-06-13 13:13:43 | INFO     | perplexitiy.recruiter_agent | Generating email for query: 
+        you are an Professional Mail writer with over 10+ years of experience
+        you are mostly known as a person who sends mail to recruiter and get 100% success rate
+        Now Work Here:
+        Name - Anurag
+        Job description - AI Engineer
+
+Build and deploy AI/ML solutions, develop LLM-powered applications, optimize models, and collaborate with cross-functional teams. Requires Python, machine learning, deep learning frameworks, and cloud platform experience.
+        ----------------------------------
+        adjust mail according to the job description and my skills
+        My Skills-
+        Python
+        Machine Learning
+        Artificial Intelligence
+        Pytorch
+        TensorFlow
+        Pandas and Numpy
+        -----------------------------------
+        Make sure that use proper spacing and format 
+        
+2026-06-13 13:13:43 | INFO     | perplexitiy.recruiter_agent | Sending email to: vanuragkumardesai@gmail.com
+2026-06-13 13:13:43 | INFO     | perplexitiy.recruiter_agent | Invoking LLM to generate email...
+2026-06-13 13:13:44 | ERROR    | perplexitiy.recruiter_agent | Email sending failed: Invalid json output: Here's an example of a professional cover letter tailored to the job description:
+
+**Anurag**
+**AI Engineer**
+
+**[Your Address]**
+**[City, State ZIP Code]**
+**[Date]**
+
+**[Hiring Manager's Name]**
+**[Company Name]**
+**[Company Address]**
+**[City, State ZIP Code]**
+
+Dear [Hiring Manager's Name],
+
+I am excited to apply for the AI Engineer position at [Company Name]. As a highly skilled professional with over 10 years of experience in building and deploying AI/ML solutions, I am confident that I possess the technical expertise and passion required to excel in this role.
+
+**Summary:**
+
+As a seasoned AI Engineer with a strong background in machine learning, deep learning, and artificial intelligence, I have a proven track record of successfully designing, developing, and deploying AI-powered applications that drive business value. My expertise spans a range of technologies, including Python, PyTorch, TensorFlow, Pandas, and Numpy.
+
+**Technical Expertise:**
+
+* **Programming Languages:** Python (Proficient)
+* **Machine Learning Frameworks:** PyTorch (Proficient), TensorFlow (Proficient)
+* **Data Science Libraries:** Pandas (Proficient), Numpy (Proficient)
+* **Cloud Platforms:** Experienced in deploying AI/ML models on cloud platforms
+
+**Key Achievements:**
+
+* Developed and deployed multiple LLM-based applications that achieved 95% accuracy in natural language processing tasks
+* Optimized machine learning models using techniques such as hyperparameter tuning, data augmentation, and transfer learning
+* Collaborated with cross-functional teams to integrate AI/ML solutions into existing business processes and systems
+
+**Why I'm a Great Fit:**
+
+* My passion for AI/ML and dedication to staying up-to-date with the latest advancements in the field make me an excellent fit for this role
+* My experience working with diverse technologies and platforms allows me to adapt quickly to new requirements and challenges
+* My excellent communication and collaboration skills enable me to effectively work with stakeholders and team members to drive project success
+
+**Conclusion:**
+
+I am excited about the opportunity to join [Company Name] and contribute my expertise in AI/ML to drive business growth and innovation. Thank you for considering my application. I would welcome the opportunity to discuss this position further and explain in greater detail why I am the ideal candidate for this role.
+
+Sincerely,
+
+**Anurag**
+**AI Engineer**
+**[Your Contact Information]**
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langchain/errors/OUTPUT_PARSING_FAILURE 
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\Desktop\RAG_&_Automation_projects\Perplexitiy_mini\Perplexity\.venv\Lib\site-packages\langchain_core\output_parsers\json.py", line 88, in parse_result
+    return parse_json_markdown(text)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\RAG_&_Automation_projects\Perplexitiy_mini\Perplexity\.venv\Lib\site-packages\langchain_core\utils\json.py", line 163, in parse_json_markdown
+    return _parse_json(json_str, parser=parser)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\RAG_&_Automation_projects\Perplexitiy_mini\Perplexity\.venv\Lib\site-packages\langchain_core\utils\json.py", line 191, in _parse_json
+    return parser(json_str)
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\RAG_&_Automation_projects\Perplexitiy_mini\Perplexity\.venv\Lib\site-packages\langchain_core\utils\json.py", line 136, in parse_partial_json
+    return json.loads(s, strict=strict)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\json\__init__.py", line 359, in loads
+    return cls(**kw).decode(s)
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\Desktop\RAG_&_Automation_projects\Perplexitiy_mini\Perplexity\perplexitiy\recruiter_agent.py", line 65, in mail_sender
+    )
+      
+  File "C:\Users\Lenovo\Desktop\RAG_&_Automation_projects\Perplexitiy_mini\Perplexity\.venv\Lib\site-packages\langchain_core\output_parsers\json.py", line 102, in parse
+    return self.parse_result([Generation(text=text)])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\RAG_&_Automation_projects\Perplexitiy_mini\Perplexity\.venv\Lib\site-packages\langchain_core\output_parsers\json.py", line 91, in parse_result
+    raise OutputParserException(msg, llm_output=text) from e
+langchain_core.exceptions.OutputParserException: Invalid json output: Here's an example of a professional cover letter tailored to the job description:
+
+**Anurag**
+**AI Engineer**
+
+**[Your Address]**
+**[City, State ZIP Code]**
+**[Date]**
+
+**[Hiring Manager's Name]**
+**[Company Name]**
+**[Company Address]**
+**[City, State ZIP Code]**
+
+Dear [Hiring Manager's Name],
+
+I am excited to apply for the AI Engineer position at [Company Name]. As a highly skilled professional with over 10 years of experience in building and deploying AI/ML solutions, I am confident that I possess the technical expertise and passion required to excel in this role.
+
+**Summary:**
+
+As a seasoned AI Engineer with a strong background in machine learning, deep learning, and artificial intelligence, I have a proven track record of successfully designing, developing, and deploying AI-powered applications that drive business value. My expertise spans a range of technologies, including Python, PyTorch, TensorFlow, Pandas, and Numpy.
+
+**Technical Expertise:**
+
+* **Programming Languages:** Python (Proficient)
+* **Machine Learning Frameworks:** PyTorch (Proficient), TensorFlow (Proficient)
+* **Data Science Libraries:** Pandas (Proficient), Numpy (Proficient)
+* **Cloud Platforms:** Experienced in deploying AI/ML models on cloud platforms
+
+**Key Achievements:**
+
+* Developed and deployed multiple LLM-based applications that achieved 95% accuracy in natural language processing tasks
+* Optimized machine learning models using techniques such as hyperparameter tuning, data augmentation, and transfer learning
+* Collaborated with cross-functional teams to integrate AI/ML solutions into existing business processes and systems
+
+**Why I'm a Great Fit:**
+
+* My passion for AI/ML and dedication to staying up-to-date with the latest advancements in the field make me an excellent fit for this role
+* My experience working with diverse technologies and platforms allows me to adapt quickly to new requirements and challenges
+* My excellent communication and collaboration skills enable me to effectively work with stakeholders and team members to drive project success
+
+**Conclusion:**
+
+I am excited about the opportunity to join [Company Name] and contribute my expertise in AI/ML to drive business growth and innovation. Thank you for considering my application. I would welcome the opportunity to discuss this position further and explain in greater detail why I am the ideal candidate for this role.
+
+Sincerely,
+
+**Anurag**
+**AI Engineer**
+**[Your Contact Information]**
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langchain/errors/OUTPUT_PARSING_FAILURE 
+2026-06-13 13:13:44 | INFO     | perplexitiy.recruiter_agent | Generating email for query: 
+        you are an Professional Mail writer with over 10+ years of experience
+        you are mostly known as a person who sends mail to recruiter and get 100% success rate
+        Now Work Here:
+        Name - Anuu
+        Job description - Full Stack Developer
+
+Develop and maintain front-end and back-end applications, build APIs, manage databases, and ensure application performance and security. Requires JavaScript/TypeScript, React, Node.js, and database knowledge.
+        ----------------------------------
+        adjust mail according to the job description and my skills
+        My Skills-
+        Python
+        Machine Learning
+        Artificial Intelligence
+        Pytorch
+        TensorFlow
+        Pandas and Numpy
+        -----------------------------------
+        Make sure that use proper spacing and format 
+        
+2026-06-13 13:13:44 | INFO     | perplexitiy.recruiter_agent | Sending email to: gameranurag24@gmail.com
+2026-06-13 13:13:44 | INFO     | perplexitiy.recruiter_agent | Invoking LLM to generate email...
+2026-06-13 13:13:45 | ERROR    | perplexitiy.recruiter_agent | Email sending failed: Invalid json output: **Subject: Application for Full Stack Developer Position**
+
+**Dear Hiring Manager,**
+
+I am excited to apply for the Full Stack Developer position at your esteemed organization. With over a decade of experience in crafting and deploying high-performance applications, I am confident that my skills and expertise align perfectly with the requirements of this role.
+
+**About Me:**
+
+As a seasoned professional with a passion for innovation and problem-solving, I bring a unique blend of technical expertise and creative thinking to the table. My proficiency in Python, Machine Learning, Artificial Intelligence, PyTorch, TensorFlow, Pandas, and NumPy enables me to design and develop sophisticated solutions that drive business growth and customer satisfaction.
+
+**Technical Skills:**
+
+- **Programming Languages:** Python
+- **Machine Learning & AI:** Proficient in developing and deploying ML and AI solutions using PyTorch and TensorFlow
+- **Data Science:** Expertise in data manipulation and analysis using Pandas and NumPy
+- **Database Management:** Familiarity with database concepts and design principles
+- **Software Development:** Experienced in building scalable and secure applications using Python and other relevant technologies
+
+**Why I'm a Great Fit:**
+
+- **Full Stack Development:** With my extensive experience in developing front-end and back-end applications, I can design and deploy comprehensive solutions that meet the needs of your organization.
+- **API Development:** My expertise in building APIs enables me to create scalable and secure interfaces that facilitate seamless data exchange between applications.
+- **Database Management:** I am well-versed in database design principles and can efficiently manage and optimize databases to ensure optimal performance.
+
+**Certifications and Education:**
+
+- **Bachelor's/Master's Degree in Computer Science** (or relevant field)
+- **Professional Certifications in Python, Machine Learning, and AI**
+
+**Why I'm Passionate about This Role:**
+
+As a Full Stack Developer, I am eager to leverage my technical expertise to drive business growth, improve customer experiences, and contribute to the development of innovative solutions. I am excited about the opportunity to join your team and collaborate with fellow professionals who share my passion for technology and innovation.
+
+**Conclusion:**
+
+Thank you for considering my application. I would be thrilled to discuss my qualifications further and explore how I can contribute to the success of your organization. Please feel free to contact me at your convenience to arrange an interview or discuss this opportunity further.
+
+**Best regards,**
+
+Anuu
+Full Stack Developer
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langchain/errors/OUTPUT_PARSING_FAILURE 
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\Desktop\RAG_&_Automation_projects\Perplexitiy_mini\Perplexity\.venv\Lib\site-packages\langchain_core\output_parsers\json.py", line 88, in parse_result
+    return parse_json_markdown(text)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\RAG_&_Automation_projects\Perplexitiy_mini\Perplexity\.venv\Lib\site-packages\langchain_core\utils\json.py", line 163, in parse_json_markdown
+    return _parse_json(json_str, parser=parser)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\RAG_&_Automation_projects\Perplexitiy_mini\Perplexity\.venv\Lib\site-packages\langchain_core\utils\json.py", line 191, in _parse_json
+    return parser(json_str)
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\RAG_&_Automation_projects\Perplexitiy_mini\Perplexity\.venv\Lib\site-packages\langchain_core\utils\json.py", line 136, in parse_partial_json
+    return json.loads(s, strict=strict)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\json\__init__.py", line 359, in loads
+    return cls(**kw).decode(s)
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\Desktop\RAG_&_Automation_projects\Perplexitiy_mini\Perplexity\perplexitiy\recruiter_agent.py", line 65, in mail_sender
+    )
+      
+  File "C:\Users\Lenovo\Desktop\RAG_&_Automation_projects\Perplexitiy_mini\Perplexity\.venv\Lib\site-packages\langchain_core\output_parsers\json.py", line 102, in parse
+    return self.parse_result([Generation(text=text)])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\RAG_&_Automation_projects\Perplexitiy_mini\Perplexity\.venv\Lib\site-packages\langchain_core\output_parsers\json.py", line 91, in parse_result
+    raise OutputParserException(msg, llm_output=text) from e
+langchain_core.exceptions.OutputParserException: Invalid json output: **Subject: Application for Full Stack Developer Position**
+
+**Dear Hiring Manager,**
+
+I am excited to apply for the Full Stack Developer position at your esteemed organization. With over a decade of experience in crafting and deploying high-performance applications, I am confident that my skills and expertise align perfectly with the requirements of this role.
+
+**About Me:**
+
+As a seasoned professional with a passion for innovation and problem-solving, I bring a unique blend of technical expertise and creative thinking to the table. My proficiency in Python, Machine Learning, Artificial Intelligence, PyTorch, TensorFlow, Pandas, and NumPy enables me to design and develop sophisticated solutions that drive business growth and customer satisfaction.
+
+**Technical Skills:**
+
+- **Programming Languages:** Python
+- **Machine Learning & AI:** Proficient in developing and deploying ML and AI solutions using PyTorch and TensorFlow
+- **Data Science:** Expertise in data manipulation and analysis using Pandas and NumPy
+- **Database Management:** Familiarity with database concepts and design principles
+- **Software Development:** Experienced in building scalable and secure applications using Python and other relevant technologies
+
+**Why I'm a Great Fit:**
+
+- **Full Stack Development:** With my extensive experience in developing front-end and back-end applications, I can design and deploy comprehensive solutions that meet the needs of your organization.
+- **API Development:** My expertise in building APIs enables me to create scalable and secure interfaces that facilitate seamless data exchange between applications.
+- **Database Management:** I am well-versed in database design principles and can efficiently manage and optimize databases to ensure optimal performance.
+
+**Certifications and Education:**
+
+- **Bachelor's/Master's Degree in Computer Science** (or relevant field)
+- **Professional Certifications in Python, Machine Learning, and AI**
+
+**Why I'm Passionate about This Role:**
+
+As a Full Stack Developer, I am eager to leverage my technical expertise to drive business growth, improve customer experiences, and contribute to the development of innovative solutions. I am excited about the opportunity to join your team and collaborate with fellow professionals who share my passion for technology and innovation.
+
+**Conclusion:**
+
+Thank you for considering my application. I would be thrilled to discuss my qualifications further and explore how I can contribute to the success of your organization. Please feel free to contact me at your convenience to arrange an interview or discuss this opportunity further.
+
+**Best regards,**
+
+Anuu
+Full Stack Developer
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langchain/errors/OUTPUT_PARSING_FAILURE 
+2026-06-13 13:13:45 | INFO     | perplexitiy.recruiter_agent | Generating email for query: 
+        you are an Professional Mail writer with over 10+ years of experience
+        you are mostly known as a person who sends mail to recruiter and get 100% success rate
+        Now Work Here:
+        Name - Kshitiz
+        Job description - Data Analyst
+
+Analyze data, create dashboards, generate insights, and support business decisions through reporting and visualization. Requires SQL, Excel, Power BI/Tableau, and strong analytical skills.
+        ----------------------------------
+        adjust mail according to the job description and my skills
+        My Skills-
+        Python
+        Machine Learning
+        Artificial Intelligence
+        Pytorch
+        TensorFlow
+        Pandas and Numpy
+        -----------------------------------
+        Make sure that use proper spacing and format 
+        
+2026-06-13 13:13:45 | INFO     | perplexitiy.recruiter_agent | Sending email to: anuragbusiness819@gmail.com
+2026-06-13 13:13:45 | INFO     | perplexitiy.recruiter_agent | Invoking LLM to generate email...
+2026-06-13 13:13:46 | ERROR    | perplexitiy.recruiter_agent | Email sending failed: Invalid json output: **Subject: Application for Data Analyst Position**
+
+Dear [Hiring Manager's Name],
+
+I am thrilled to apply for the Data Analyst position at [Company Name], as advertised on [Job Board/Source]. With over 10+ years of experience in crafting compelling mail that yields 100% success rates, I am confident that my skills and expertise make me an ideal fit for this role.
+
+**Job Description Alignment**
+
+As a seasoned data professional, I am well-versed in analyzing complex data sets, creating interactive dashboards, and generating actionable insights that inform business decisions. My expertise in SQL, Excel, and data visualization tools such as Power BI/Tableau aligns perfectly with the job requirements.
+
+**My Expertise**
+
+In addition to the traditional data analysis skills, I possess a strong background in programming languages, specifically:
+
+* **Python**: I have extensive experience in using Python for data analysis, machine learning, and artificial intelligence tasks. My proficiency in libraries such as Pandas and Numpy enables me to efficiently manipulate and analyze large datasets.
+* **Machine Learning and Artificial Intelligence**: I have a solid grasp of machine learning concepts and have applied them to real-world problems using popular frameworks like PyTorch and TensorFlow.
+* **PyTorch and TensorFlow**: I am well-versed in using these frameworks for building and deploying machine learning models, which has enabled me to deliver data-driven insights and recommendations to stakeholders.
+
+**Why I'm the Best Fit**
+
+With my unique blend of technical expertise, business acumen, and passion for data-driven decision-making, I am confident that I can make a significant impact at [Company Name]. My ability to communicate complex data insights to non-technical stakeholders and my experience in creating compelling visualizations will enable me to support business decisions and drive growth.
+
+**Next Steps**
+
+I would be delighted to discuss my application and how my skills align with the company's goals. Please feel free to contact me at [Your Email Address] or [Your Phone Number] to schedule a conversation.
+
+Thank you for considering my application. I look forward to the opportunity to contribute to [Company Name]'s success.
+
+Best regards,
+
+Kshitiz
+Data Analyst
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langchain/errors/OUTPUT_PARSING_FAILURE 
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\Desktop\RAG_&_Automation_projects\Perplexitiy_mini\Perplexity\.venv\Lib\site-packages\langchain_core\output_parsers\json.py", line 88, in parse_result
+    return parse_json_markdown(text)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\RAG_&_Automation_projects\Perplexitiy_mini\Perplexity\.venv\Lib\site-packages\langchain_core\utils\json.py", line 163, in parse_json_markdown
+    return _parse_json(json_str, parser=parser)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\RAG_&_Automation_projects\Perplexitiy_mini\Perplexity\.venv\Lib\site-packages\langchain_core\utils\json.py", line 191, in _parse_json
+    return parser(json_str)
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\RAG_&_Automation_projects\Perplexitiy_mini\Perplexity\.venv\Lib\site-packages\langchain_core\utils\json.py", line 136, in parse_partial_json
+    return json.loads(s, strict=strict)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\json\__init__.py", line 359, in loads
+    return cls(**kw).decode(s)
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\Desktop\RAG_&_Automation_projects\Perplexitiy_mini\Perplexity\perplexitiy\recruiter_agent.py", line 65, in mail_sender
+    )
+      
+  File "C:\Users\Lenovo\Desktop\RAG_&_Automation_projects\Perplexitiy_mini\Perplexity\.venv\Lib\site-packages\langchain_core\output_parsers\json.py", line 102, in parse
+    return self.parse_result([Generation(text=text)])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\RAG_&_Automation_projects\Perplexitiy_mini\Perplexity\.venv\Lib\site-packages\langchain_core\output_parsers\json.py", line 91, in parse_result
+    raise OutputParserException(msg, llm_output=text) from e
+langchain_core.exceptions.OutputParserException: Invalid json output: **Subject: Application for Data Analyst Position**
+
+Dear [Hiring Manager's Name],
+
+I am thrilled to apply for the Data Analyst position at [Company Name], as advertised on [Job Board/Source]. With over 10+ years of experience in crafting compelling mail that yields 100% success rates, I am confident that my skills and expertise make me an ideal fit for this role.
+
+**Job Description Alignment**
+
+As a seasoned data professional, I am well-versed in analyzing complex data sets, creating interactive dashboards, and generating actionable insights that inform business decisions. My expertise in SQL, Excel, and data visualization tools such as Power BI/Tableau aligns perfectly with the job requirements.
+
+**My Expertise**
+
+In addition to the traditional data analysis skills, I possess a strong background in programming languages, specifically:
+
+* **Python**: I have extensive experience in using Python for data analysis, machine learning, and artificial intelligence tasks. My proficiency in libraries such as Pandas and Numpy enables me to efficiently manipulate and analyze large datasets.
+* **Machine Learning and Artificial Intelligence**: I have a solid grasp of machine learning concepts and have applied them to real-world problems using popular frameworks like PyTorch and TensorFlow.
+* **PyTorch and TensorFlow**: I am well-versed in using these frameworks for building and deploying machine learning models, which has enabled me to deliver data-driven insights and recommendations to stakeholders.
+
+**Why I'm the Best Fit**
+
+With my unique blend of technical expertise, business acumen, and passion for data-driven decision-making, I am confident that I can make a significant impact at [Company Name]. My ability to communicate complex data insights to non-technical stakeholders and my experience in creating compelling visualizations will enable me to support business decisions and drive growth.
+
+**Next Steps**
+
+I would be delighted to discuss my application and how my skills align with the company's goals. Please feel free to contact me at [Your Email Address] or [Your Phone Number] to schedule a conversation.
+
+Thank you for considering my application. I look forward to the opportunity to contribute to [Company Name]'s success.
+
+Best regards,
+
+Kshitiz
+Data Analyst
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langchain/errors/OUTPUT_PARSING_FAILURE 
+2026-06-13 13:13:46 | INFO     | perplexitiy.recruiter_agent | All mails send to the user
+2026-06-13 13:14:44 | INFO     | RAG.vector_store | Store initialized
+2026-06-13 13:14:50 | INFO     | RAG.embedding_manager | Model Loaded Successfully: BAAI/bge-small-en-v1.5
+2026-06-13 13:15:20 | INFO     | perplexitiy.recruiter_agent | Generating email for query: You are a professional mail writer with over 10+ years of experience in sending emails to recruiters with a 100% success rate.
+My name is Anurag Kumar, Mob Number- 9999999999
+Generate a professional email for the following:
+
+Hiring person Name: Anurag
+Job Description: AI Engineer
+
+Build and deploy AI/ML solutions, develop LLM-powered applications, optimize models, and collaborate with cross-functional teams. Requires Python, machine learning, deep learning frameworks, and cloud platform experience.
+
+Instructions:
+- Tailor the email to match the job description
+- Highlight these relevant skills: Python, Machine Learning, Artificial Intelligence, PyTorch, TensorFlow, Pandas, Numpy
+- Create a compelling subject line
+- Write a professional, well-formatted body
+- Make it personalized and engaging
+
+Skills to highlight:
+- Python
+- Machine Learning
+- Artificial Intelligence
+- PyTorch
+- TensorFlow
+- Pandas and Numpy
+2026-06-13 13:15:20 | INFO     | perplexitiy.recruiter_agent | Sending email to: vanuragkumardesai@gmail.com
+2026-06-13 13:15:20 | INFO     | perplexitiy.recruiter_agent | Invoking LLM to generate email...
+2026-06-13 13:15:21 | INFO     | perplexitiy.recruiter_agent | Connecting to Gmail SMTP server...
+2026-06-13 13:15:21 | INFO     | perplexitiy.recruiter_agent | Starting TLS...
+2026-06-13 13:15:22 | INFO     | perplexitiy.recruiter_agent | Logging in as gameranurag24@gmail.com...
+2026-06-13 13:15:22 | INFO     | perplexitiy.recruiter_agent | Sending email to vanuragkumardesai@gmail.com...
+2026-06-13 13:15:25 | INFO     | perplexitiy.recruiter_agent | Generating email for query: You are a professional mail writer with over 10+ years of experience in sending emails to recruiters with a 100% success rate.
+My name is Anurag Kumar, Mob Number- 9999999999
+Generate a professional email for the following:
+
+Hiring person Name: Anuu
+Job Description: Full Stack Developer
+
+Develop and maintain front-end and back-end applications, build APIs, manage databases, and ensure application performance and security. Requires JavaScript/TypeScript, React, Node.js, and database knowledge.
+
+Instructions:
+- Tailor the email to match the job description
+- Highlight these relevant skills: Python, Machine Learning, Artificial Intelligence, PyTorch, TensorFlow, Pandas, Numpy
+- Create a compelling subject line
+- Write a professional, well-formatted body
+- Make it personalized and engaging
+
+Skills to highlight:
+- Python
+- Machine Learning
+- Artificial Intelligence
+- PyTorch
+- TensorFlow
+- Pandas and Numpy
+2026-06-13 13:15:25 | INFO     | perplexitiy.recruiter_agent | Sending email to: gameranurag24@gmail.com
+2026-06-13 13:15:25 | INFO     | perplexitiy.recruiter_agent | Invoking LLM to generate email...
+2026-06-13 13:15:26 | INFO     | perplexitiy.recruiter_agent | Connecting to Gmail SMTP server...
+2026-06-13 13:15:26 | INFO     | perplexitiy.recruiter_agent | Starting TLS...
+2026-06-13 13:15:27 | INFO     | perplexitiy.recruiter_agent | Logging in as gameranurag24@gmail.com...
+2026-06-13 13:15:27 | INFO     | perplexitiy.recruiter_agent | Sending email to gameranurag24@gmail.com...
+2026-06-13 13:15:29 | INFO     | perplexitiy.recruiter_agent | Generating email for query: You are a professional mail writer with over 10+ years of experience in sending emails to recruiters with a 100% success rate.
+My name is Anurag Kumar, Mob Number- 9999999999
+Generate a professional email for the following:
+
+Hiring person Name: Kshitiz
+Job Description: Data Analyst
+
+Analyze data, create dashboards, generate insights, and support business decisions through reporting and visualization. Requires SQL, Excel, Power BI/Tableau, and strong analytical skills.
+
+Instructions:
+- Tailor the email to match the job description
+- Highlight these relevant skills: Python, Machine Learning, Artificial Intelligence, PyTorch, TensorFlow, Pandas, Numpy
+- Create a compelling subject line
+- Write a professional, well-formatted body
+- Make it personalized and engaging
+
+Skills to highlight:
+- Python
+- Machine Learning
+- Artificial Intelligence
+- PyTorch
+- TensorFlow
+- Pandas and Numpy
+2026-06-13 13:15:29 | INFO     | perplexitiy.recruiter_agent | Sending email to: anuragbusiness819@gmail.com
+2026-06-13 13:15:29 | INFO     | perplexitiy.recruiter_agent | Invoking LLM to generate email...
+2026-06-13 13:15:30 | INFO     | perplexitiy.recruiter_agent | Connecting to Gmail SMTP server...
+2026-06-13 13:15:30 | INFO     | perplexitiy.recruiter_agent | Starting TLS...
+2026-06-13 13:15:31 | INFO     | perplexitiy.recruiter_agent | Logging in as gameranurag24@gmail.com...
+2026-06-13 13:15:31 | INFO     | perplexitiy.recruiter_agent | Sending email to anuragbusiness819@gmail.com...
+2026-06-13 13:15:33 | INFO     | perplexitiy.recruiter_agent | All email processing completed
+2026-06-13 13:17:46 | INFO     | perplexitiy.recruiter_agent | Generating email for query: You are a professional mail writer with over 10+ years of experience in sending emails to recruiters with a 100% success rate.
+My name is Anurag Kumar, Mob Number- 9999999999
+Generate a professional email for the following:
+
+Hiring person Name: Anurag
+Job Description: AI Engineer
+
+Build and deploy AI/ML solutions, develop LLM-powered applications, optimize models, and collaborate with cross-functional teams. Requires Python, machine learning, deep learning frameworks, and cloud platform experience.
+
+Instructions:
+- Tailor the email to match the job description
+- Highlight these relevant skills: Python, Machine Learning, Artificial Intelligence, PyTorch, TensorFlow, Pandas, Numpy
+- Create a compelling subject line
+- Write a professional, well-formatted body
+- Make it personalized and engaging
+
+Skills to highlight:
+- Python
+- Machine Learning
+- Artificial Intelligence
+- PyTorch
+- TensorFlow
+- Pandas and Numpy
+2026-06-13 13:17:46 | INFO     | perplexitiy.recruiter_agent | Sending email to: vanuragkumardesai@gmail.com
+2026-06-13 13:17:46 | INFO     | perplexitiy.recruiter_agent | Invoking LLM to generate email...
+2026-06-13 13:17:47 | INFO     | perplexitiy.recruiter_agent | Connecting to Gmail SMTP server...
+2026-06-13 13:17:47 | INFO     | perplexitiy.recruiter_agent | Starting TLS...
+2026-06-13 13:17:48 | INFO     | perplexitiy.recruiter_agent | Logging in as gameranurag24@gmail.com...
+2026-06-13 13:17:48 | INFO     | perplexitiy.recruiter_agent | Sending email to vanuragkumardesai@gmail.com...
+2026-06-13 13:17:50 | INFO     | perplexitiy.recruiter_agent | Generating email for query: You are a professional mail writer with over 10+ years of experience in sending emails to recruiters with a 100% success rate.
+My name is Anurag Kumar, Mob Number- 9999999999
+Generate a professional email for the following:
+
+Hiring person Name: Anuu
+Job Description: Full Stack Developer
+
+Develop and maintain front-end and back-end applications, build APIs, manage databases, and ensure application performance and security. Requires JavaScript/TypeScript, React, Node.js, and database knowledge.
+
+Instructions:
+- Tailor the email to match the job description
+- Highlight these relevant skills: Python, Machine Learning, Artificial Intelligence, PyTorch, TensorFlow, Pandas, Numpy
+- Create a compelling subject line
+- Write a professional, well-formatted body
+- Make it personalized and engaging
+
+Skills to highlight:
+- Python
+- Machine Learning
+- Artificial Intelligence
+- PyTorch
+- TensorFlow
+- Pandas and Numpy
+2026-06-13 13:17:50 | INFO     | perplexitiy.recruiter_agent | Sending email to: gameranurag24@gmail.com
+2026-06-13 13:17:50 | INFO     | perplexitiy.recruiter_agent | Invoking LLM to generate email...
+2026-06-13 13:17:51 | INFO     | perplexitiy.recruiter_agent | Connecting to Gmail SMTP server...
+2026-06-13 13:17:51 | INFO     | perplexitiy.recruiter_agent | Starting TLS...
+2026-06-13 13:17:52 | INFO     | perplexitiy.recruiter_agent | Logging in as gameranurag24@gmail.com...
+2026-06-13 13:17:53 | INFO     | perplexitiy.recruiter_agent | Sending email to gameranurag24@gmail.com...
+2026-06-13 13:17:54 | INFO     | perplexitiy.recruiter_agent | Generating email for query: You are a professional mail writer with over 10+ years of experience in sending emails to recruiters with a 100% success rate.
+My name is Anurag Kumar, Mob Number- 9999999999
+Generate a professional email for the following:
+
+Hiring person Name: Kshitiz
+Job Description: Data Analyst
+
+Analyze data, create dashboards, generate insights, and support business decisions through reporting and visualization. Requires SQL, Excel, Power BI/Tableau, and strong analytical skills.
+
+Instructions:
+- Tailor the email to match the job description
+- Highlight these relevant skills: Python, Machine Learning, Artificial Intelligence, PyTorch, TensorFlow, Pandas, Numpy
+- Create a compelling subject line
+- Write a professional, well-formatted body
+- Make it personalized and engaging
+
+Skills to highlight:
+- Python
+- Machine Learning
+- Artificial Intelligence
+- PyTorch
+- TensorFlow
+- Pandas and Numpy
+2026-06-13 13:17:54 | INFO     | perplexitiy.recruiter_agent | Sending email to: anuragbusiness819@gmail.com
+2026-06-13 13:17:54 | INFO     | perplexitiy.recruiter_agent | Invoking LLM to generate email...
+2026-06-13 13:17:55 | INFO     | perplexitiy.recruiter_agent | Connecting to Gmail SMTP server...
+2026-06-13 13:17:55 | INFO     | perplexitiy.recruiter_agent | Starting TLS...
+2026-06-13 13:17:56 | INFO     | perplexitiy.recruiter_agent | Logging in as gameranurag24@gmail.com...
+2026-06-13 13:17:57 | INFO     | perplexitiy.recruiter_agent | Sending email to anuragbusiness819@gmail.com...
+2026-06-13 13:17:58 | INFO     | perplexitiy.recruiter_agent | All email processing completed
+2026-06-13 13:21:12 | INFO     | RAG.vector_store | Store initialized
+2026-06-13 13:21:18 | INFO     | RAG.embedding_manager | Model Loaded Successfully: BAAI/bge-small-en-v1.5
+2026-06-13 13:21:50 | INFO     | perplexitiy.recruiter_agent | Generating email for query: You are a professional mail writer with over 10+ years of experience in sending emails to recruiters with a 100% success rate.
+My name is Anurag Kumar, Mob Number- 9999999999
+Generate a professional email for the following:
+
+Hiring person Name: Anurag
+Job Description: AI Engineer
+
+Build and deploy AI/ML solutions, develop LLM-powered applications, optimize models, and collaborate with cross-functional teams. Requires Python, machine learning, deep learning frameworks, and cloud platform experience.
+
+Instructions:
+- Tailor the email to match the job description
+- Highlight these relevant skills: Python, Machine Learning, Artificial Intelligence, PyTorch, TensorFlow, Pandas, Numpy
+- Create a compelling subject line
+- Write a professional, well-formatted body
+- Make it personalized and engaging
+
+Skills to highlight:
+- Python
+- Machine Learning
+- Artificial Intelligence
+- PyTorch
+- TensorFlow
+- Pandas and Numpy
+2026-06-13 13:21:50 | INFO     | perplexitiy.recruiter_agent | Sending email to: vanuragkumardesai@gmail.com
+2026-06-13 13:21:50 | INFO     | perplexitiy.recruiter_agent | Invoking LLM to generate email...
+2026-06-13 13:21:51 | INFO     | perplexitiy.recruiter_agent | Connecting to Gmail SMTP server...
+2026-06-13 13:21:56 | INFO     | perplexitiy.recruiter_agent | Starting TLS...
+2026-06-13 13:21:56 | INFO     | perplexitiy.recruiter_agent | Logging in as gameranurag24@gmail.com...
+2026-06-13 13:21:57 | INFO     | perplexitiy.recruiter_agent | Sending email to vanuragkumardesai@gmail.com...
+2026-06-13 13:21:59 | INFO     | perplexitiy.recruiter_agent | Generating email for query: You are a professional mail writer with over 10+ years of experience in sending emails to recruiters with a 100% success rate.
+My name is Anurag Kumar, Mob Number- 9999999999
+Generate a professional email for the following:
+
+Hiring person Name: Anuu
+Job Description: Full Stack Developer
+
+Develop and maintain front-end and back-end applications, build APIs, manage databases, and ensure application performance and security. Requires JavaScript/TypeScript, React, Node.js, and database knowledge.
+
+Instructions:
+- Tailor the email to match the job description
+- Highlight these relevant skills: Python, Machine Learning, Artificial Intelligence, PyTorch, TensorFlow, Pandas, Numpy
+- Create a compelling subject line
+- Write a professional, well-formatted body
+- Make it personalized and engaging
+
+Skills to highlight:
+- Python
+- Machine Learning
+- Artificial Intelligence
+- PyTorch
+- TensorFlow
+- Pandas and Numpy
+2026-06-13 13:21:59 | INFO     | perplexitiy.recruiter_agent | Sending email to: gameranurag24@gmail.com
+2026-06-13 13:21:59 | INFO     | perplexitiy.recruiter_agent | Invoking LLM to generate email...
+2026-06-13 13:22:00 | INFO     | perplexitiy.recruiter_agent | Connecting to Gmail SMTP server...
+2026-06-13 13:22:00 | INFO     | perplexitiy.recruiter_agent | Starting TLS...
+2026-06-13 13:22:01 | INFO     | perplexitiy.recruiter_agent | Logging in as gameranurag24@gmail.com...
+2026-06-13 13:22:01 | INFO     | perplexitiy.recruiter_agent | Sending email to gameranurag24@gmail.com...
+2026-06-13 13:22:04 | INFO     | perplexitiy.recruiter_agent | Generating email for query: You are a professional mail writer with over 10+ years of experience in sending emails to recruiters with a 100% success rate.
+My name is Anurag Kumar, Mob Number- 9999999999
+Generate a professional email for the following:
+
+Hiring person Name: Kshitiz
+Job Description: Data Analyst
+
+Analyze data, create dashboards, generate insights, and support business decisions through reporting and visualization. Requires SQL, Excel, Power BI/Tableau, and strong analytical skills.
+
+Instructions:
+- Tailor the email to match the job description
+- Highlight these relevant skills: Python, Machine Learning, Artificial Intelligence, PyTorch, TensorFlow, Pandas, Numpy
+- Create a compelling subject line
+- Write a professional, well-formatted body
+- Make it personalized and engaging
+
+Skills to highlight:
+- Python
+- Machine Learning
+- Artificial Intelligence
+- PyTorch
+- TensorFlow
+- Pandas and Numpy
+2026-06-13 13:22:04 | INFO     | perplexitiy.recruiter_agent | Sending email to: anuragbusiness819@gmail.com
+2026-06-13 13:22:04 | INFO     | perplexitiy.recruiter_agent | Invoking LLM to generate email...
+2026-06-13 13:22:05 | INFO     | perplexitiy.recruiter_agent | Connecting to Gmail SMTP server...
+2026-06-13 13:22:06 | INFO     | perplexitiy.recruiter_agent | Starting TLS...
+2026-06-13 13:22:06 | INFO     | perplexitiy.recruiter_agent | Logging in as gameranurag24@gmail.com...
+2026-06-13 13:22:07 | INFO     | perplexitiy.recruiter_agent | Sending email to anuragbusiness819@gmail.com...
+2026-06-13 13:22:09 | INFO     | perplexitiy.recruiter_agent | All email processing completed
+2026-06-13 13:23:29 | INFO     | RAG.vector_store | Store initialized
+2026-06-13 13:23:35 | INFO     | RAG.embedding_manager | Model Loaded Successfully: BAAI/bge-small-en-v1.5
+2026-06-13 13:25:22 | INFO     | perplexitiy.recruiter_agent | Generating email for query: You are a professional mail writer with over 10+ years of experience in sending emails to recruiters with a 100% success rate.
+My name is Anurag Kumar, Mob Number- 9999999999
+Generate a professional email for the following:
+
+Hiring person Name: Anurag
+Job Description: AI Engineer
+
+Build and deploy AI/ML solutions, develop LLM-powered applications, optimize models, and collaborate with cross-functional teams. Requires Python, machine learning, deep learning frameworks, and cloud platform experience.
+
+Instructions:
+- Tailor the email to match the job description
+- Highlight these relevant skills: Python, Machine Learning, Artificial Intelligence, PyTorch, TensorFlow, Pandas, Numpy
+- Create a compelling subject line
+- Write a professional, well-formatted body
+- Make it personalized and engaging
+
+Skills to highlight:
+- Python
+- Machine Learning
+- Artificial Intelligence
+- PyTorch
+- TensorFlow
+- Pandas and Numpy
+2026-06-13 13:25:22 | INFO     | perplexitiy.recruiter_agent | Sending email to: vanuragkumardesai@gmail.com
+2026-06-13 13:25:22 | INFO     | perplexitiy.recruiter_agent | Invoking LLM to generate email...
+2026-06-13 13:25:23 | INFO     | perplexitiy.recruiter_agent | Connecting to Gmail SMTP server...
+2026-06-13 13:25:24 | INFO     | perplexitiy.recruiter_agent | Starting TLS...
+2026-06-13 13:25:24 | INFO     | perplexitiy.recruiter_agent | Logging in as gameranurag24@gmail.com...
+2026-06-13 13:25:25 | INFO     | perplexitiy.recruiter_agent | Sending email to vanuragkumardesai@gmail.com...
+2026-06-13 13:25:28 | INFO     | perplexitiy.recruiter_agent | Generating email for query: You are a professional mail writer with over 10+ years of experience in sending emails to recruiters with a 100% success rate.
+My name is Anurag Kumar, Mob Number- 9999999999
+Generate a professional email for the following:
+
+Hiring person Name: Anuu
+Job Description: Full Stack Developer
+
+Develop and maintain front-end and back-end applications, build APIs, manage databases, and ensure application performance and security. Requires JavaScript/TypeScript, React, Node.js, and database knowledge.
+
+Instructions:
+- Tailor the email to match the job description
+- Highlight these relevant skills: Python, Machine Learning, Artificial Intelligence, PyTorch, TensorFlow, Pandas, Numpy
+- Create a compelling subject line
+- Write a professional, well-formatted body
+- Make it personalized and engaging
+
+Skills to highlight:
+- Python
+- Machine Learning
+- Artificial Intelligence
+- PyTorch
+- TensorFlow
+- Pandas and Numpy
+2026-06-13 13:25:28 | INFO     | perplexitiy.recruiter_agent | Sending email to: gameranurag24@gmail.com
+2026-06-13 13:25:28 | INFO     | perplexitiy.recruiter_agent | Invoking LLM to generate email...
+2026-06-13 13:25:28 | INFO     | perplexitiy.recruiter_agent | Connecting to Gmail SMTP server...
+2026-06-13 13:25:29 | INFO     | perplexitiy.recruiter_agent | Starting TLS...
+2026-06-13 13:25:29 | INFO     | perplexitiy.recruiter_agent | Logging in as gameranurag24@gmail.com...
+2026-06-13 13:25:30 | INFO     | perplexitiy.recruiter_agent | Sending email to gameranurag24@gmail.com...
+2026-06-13 13:25:32 | INFO     | perplexitiy.recruiter_agent | Generating email for query: You are a professional mail writer with over 10+ years of experience in sending emails to recruiters with a 100% success rate.
+My name is Anurag Kumar, Mob Number- 9999999999
+Generate a professional email for the following:
+
+Hiring person Name: Kshitiz
+Job Description: Data Analyst
+
+Analyze data, create dashboards, generate insights, and support business decisions through reporting and visualization. Requires SQL, Excel, Power BI/Tableau, and strong analytical skills.
+
+Instructions:
+- Tailor the email to match the job description
+- Highlight these relevant skills: Python, Machine Learning, Artificial Intelligence, PyTorch, TensorFlow, Pandas, Numpy
+- Create a compelling subject line
+- Write a professional, well-formatted body
+- Make it personalized and engaging
+
+Skills to highlight:
+- Python
+- Machine Learning
+- Artificial Intelligence
+- PyTorch
+- TensorFlow
+- Pandas and Numpy
+2026-06-13 13:25:32 | INFO     | perplexitiy.recruiter_agent | Sending email to: anuragbusiness819@gmail.com
+2026-06-13 13:25:32 | INFO     | perplexitiy.recruiter_agent | Invoking LLM to generate email...
+2026-06-13 13:25:33 | INFO     | perplexitiy.recruiter_agent | Connecting to Gmail SMTP server...
+2026-06-13 13:25:34 | INFO     | perplexitiy.recruiter_agent | Starting TLS...
+2026-06-13 13:25:34 | INFO     | perplexitiy.recruiter_agent | Logging in as gameranurag24@gmail.com...
+2026-06-13 13:25:35 | INFO     | perplexitiy.recruiter_agent | Sending email to anuragbusiness819@gmail.com...
+2026-06-13 13:25:37 | INFO     | perplexitiy.recruiter_agent | All email processing completed
